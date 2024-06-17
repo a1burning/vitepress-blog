@@ -1,0 +1,28 @@
+{
+    "name": "vitepress-blog",
+    "version": "1.0.0",
+    "description": "使用vitepress重构blog项目",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vitepress dev docs",
+        "build": "vitepress build docs",
+        "preview": "vitepress preview docs",
+        "deploy-csf": "sh shell/deploy-csf.sh",
+        "deploy-rsync": "sh shell/deploy-rsync.sh"
+    },
+    "keywords": [],
+    "author": "csf",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.14.2",
+        "@types/vue": "^2.0.0",
+        "js-yaml": "^4.1.0",
+        "vite-plugin-vitepress-auto-sidebar": "^1.6.5",
+        "vitepress": "^1.2.3"
+    },
+    "dependencies": {
+        "vue": "^3.4.29"
+    }
+}
