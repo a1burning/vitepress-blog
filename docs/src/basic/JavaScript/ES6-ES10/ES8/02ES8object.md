@@ -1,10 +1,10 @@
 ---
 title: ES8(二) —— Object （keys、values、entries）
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./01ES8async.md
-next: ./03ES8string.md
+prev: ./01ES8async
+next: ./03ES8string
 sidebarDepth: 5
 ---
 ## ES8新增对对象快速遍历的方法
@@ -81,7 +81,7 @@ console.log(Object.values(grade).filter(item => item > 97)) //[99]
 
 ### Object.entries()
 #### 可以把对象变成可遍历的对象
-可以结合 [ES6（十五）—— lterator](./ES6/15ES6(iterator).md) 使用
+可以结合 [ES6（十五）—— lterator](./ES6/15ES6(iterator)) 使用
 ```js
 let grade = {
   "lilei": 96,

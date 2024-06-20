@@ -1,6 +1,6 @@
 ---
 title: JavaScript异步编程
-tags: 
+tags:
   - JavaScript
   - ES6
 date: 2020-11-19
@@ -27,7 +27,7 @@ sidebarDepth: 5
 ```js
 console.log('global begin')
 function bar () {
-    console.log('bar task') 
+    console.log('bar task')
 }
 function foo () {
     console.log('foo task')
@@ -101,9 +101,9 @@ foo(function() {
 
 还有其他的一些实现异步的方式，例如：**事件机制和发布订阅**。这些也都是基于回调函数之上的变体。
 ### Promise —— 更优的异步编程解决方案
-主要为了解决回调地狱问题，详细了解参考 [Promise（更优的异步编程解决方案）](../../ES6-ES10/ES6/11ES6(promise).md)
+主要为了解决回调地狱问题，详细了解参考 [Promise（更优的异步编程解决方案）](../../ES6-ES10/ES6/11ES6(promise))
 ### Generator
-详细了解参考 [Generator -> Generator异步方案](../../ES6-ES10/ES6/14ES6(generator).md)
+详细了解参考 [Generator -> Generator异步方案](../../ES6-ES10/ES6/14ES6(generator))
 ### async/await —— 异步操作的终极解决方案
-详细了解参考 [async&await -> async/await处理多回调异步](../../ES6-ES10/ES8/01ES8async.md)
+详细了解参考 [async&await -> async/await处理多回调异步](../../ES6-ES10/ES8/01ES8async)
 

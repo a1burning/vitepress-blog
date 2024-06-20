@@ -1,14 +1,12 @@
 ---
 title: 分析源码并手写一个超简单的Vuex
-tags: 
+tags:
   - Vue
   - Vuex
   - Source Code
-prev: ./02vuex.md
-next: false
 sidebarDepth: 5
 ---
-
+# 分析源码并手写一个超简单的Vuex
 ## 分析源码
 
 官网下载3.6版本。
@@ -30,10 +28,10 @@ sidebarDepth: 5
 ### 核心
 1. 初始化内部数据成员
 2. 设置commit和dispatch的this指向
-3. 初始化state响应式数据  
-    -  Vuex内部就是使用的Vue来实现数据响应式功能，将用户传入的$$state挂载到了Vue实例的data中  
-    -  给store设置了一个get访问器访问state属性的时候返回`this._vm._data.$$state`，所以我们使用的时候直接使用store.state就可以访问。  
-4. 初始化getters数据(计算属性)  
+3. 初始化state响应式数据
+    -  Vuex内部就是使用的Vue来实现数据响应式功能，将用户传入的$$state挂载到了Vue实例的data中
+    -  给store设置了一个get访问器访问state属性的时候返回`this._vm._data.$$state`，所以我们使用的时候直接使用store.state就可以访问。
+4. 初始化getters数据(计算属性)
     -  getter中的计算属性，依赖成员变化，计算属性重新计算，计算属性有缓存功能，数据没有变，不会重新获取。
     -  遍历用户传递的getters，然后将其通过Object.defineProperty方法设置get和enumerable，get方法返回`store._vm[key]`
     -  最后添加到Vue的计算属性computed上。访问store.getters就是返回vue实例上的computed。

@@ -10,7 +10,7 @@ export default defineConfig({
     description: "blog for hu77",
     head,
     srcDir: 'src',
-    ignoreDeadLinks: true,// TODO: 忽略死链接检查
+    ignoreDeadLinks: true,// 忽略死链接检查
     themeConfig: {
         logo: '/assets/img/logo.webp',
         lastUpdatedText: '更新时间', // string | boolean
@@ -25,10 +25,10 @@ export default defineConfig({
             message: 'MIT Licensed',
             copyright: `版权所有 © 2019-${new Date().getFullYear()}  Burning`
         },
-        // docFooter: {
-        //   prev: '上一页',
-        //   next: '下一页'
-        // },
+        docFooter: {
+            prev: '上一页',
+            next: '下一页'
+        },
         returnToTopLabel: '回到顶部',
         sidebarMenuLabel: '菜单',
         search: {

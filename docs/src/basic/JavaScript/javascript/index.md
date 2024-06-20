@@ -1,6 +1,6 @@
 ---
 title: JavaScript
-tags: 
+tags:
   - JavaScript
 prev: false
 next: false
@@ -11,7 +11,7 @@ sidebarDepth: 5
 ## ECMAScript
 
 ## DOM
-- [JS、Jquery](./DOM/01attr.md)
+- [JS、Jquery](./DOM/01attr)
 ## BOM
-- [Location对象](./BOM/01location.md)
+- [Location对象](./BOM/01location)
 

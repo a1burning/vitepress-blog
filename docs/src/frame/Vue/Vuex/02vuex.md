@@ -1,17 +1,16 @@
 ---
 title: 用Vuex完成购物车案例
-tags: 
+tags:
   - Vue
   - Vuex
   - Example
-prev: ./01vuex.md
-next: ./03vuex.md
 sidebarDepth: 5
 ---
-<Badge text="案例"/>
+# 用Vuex完成购物车案例 <Badge text="案例"/>
+
 上一节介绍了`Vuex`的核心原理及简单使用，这里来一个实际案例
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2bfd39c42124bd39d7c21a5358f95e0~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex02.png)
 
 ## 需求
 - 商品列表展示商品、价格和【加入购物车】按钮
@@ -189,7 +188,7 @@ export default {
 把当前点击的商品存储到一个位置，将来在购物车列表组件中可以访问到，所以需要一个位置记录所有的购物车数据，这个数据在多个组件中可以共享，所以将这个数据放在`cart`模块中
 
  1. 在模块`cart.js`中写数据
- 
+
 ```js
 const state = {
   // 记录购物车商品数据

@@ -1,13 +1,13 @@
 ---
 title: 手写一个Promise源码
-tags: 
+tags:
   - JavaScript
   - ES6
   - Source Code
 sidebarDepth: 5
 ---
 > 这里只是对Promise源码的实现做一个剖析，如果想对Promise整体有个了解，<br/>
-请看 [ES6（十一）—— Promise（更优的异步编程解决方案）](/basic/JavaScript/ES6-ES10/ES6/11ES6(promise).md)
+请看 [ES6（十一）—— Promise（更优的异步编程解决方案）](/basic/JavaScript/ES6-ES10/ES6/11ES6(promise))
 
 ## 一、Promise核心逻辑实现
 首先分析其原理
@@ -21,13 +21,13 @@ sidebarDepth: 5
 > 3. `resolve` 和 `reject`函数是用来更改状态的<br/>
 >`resolve：fulfilled`<br/>
 >`reject：rejected`
-> 4. `then`方法内部做的事情就是判断状态 
+> 4. `then`方法内部做的事情就是判断状态
 >如果状态是成功，调用成功回调函数<br/>
 >如果状态是失败，就调用失败回调函数<br/>
 >`then`方法是被定义在原型对象中的
 > 5. `then`成功回调有一个参数，表示成功之后的值；`then`失败回调有一个参数，表示失败后的原因
 
-**<PS:本文myPromise.js是源码文件，promise.js是使用promise文件>** 
+**<PS:本文myPromise.js是源码文件，promise.js是使用promise文件>**
 ```js
 // myPromise.js
 // 定义成常量是为了复用且代码有提示
@@ -108,7 +108,7 @@ let promise = new MyPromise((resolve, reject) => {
   // 这个时候判断promise状态，状态是pending，然而之前并没有判断等待这个状态
   setTimeout(() => {
     resolve('success')
-  }, 2000); 
+  }, 2000);
  })
 
  promise.then(value => {
@@ -186,14 +186,14 @@ const MyPromise = require('./myPromise')
 let promise = new MyPromise((resolve, reject) => {
   setTimeout(() => {
     resolve('success')
-  }, 2000); 
+  }, 2000);
  })
 
  promise.then(value => {
    console.log(1)
    console.log('resolve', value)
  })
- 
+
  promise.then(value => {
   console.log(2)
   console.log('resolve', value)
@@ -447,14 +447,14 @@ const MyPromise = require('./myPromise')
 let promise = new MyPromise((resolve, reject) => {
     resolve('success')
 })
- 
+
 // 这个时候将promise定义一个p1，然后返回的时候返回p1这个promise
 let p1 = promise.then(value => {
    console.log(1)
    console.log('resolve', value)
    return p1
 })
- 
+
 // 运行的时候会走reject
 p1.then(value => {
   console.log(2)
@@ -495,7 +495,7 @@ let promise = new MyPromise((resolve, reject) => {
     // resolve('success')
     throw new Error('执行器错误')
 })
- 
+
 promise.then(value => {
   console.log(1)
   console.log('resolve', value)
@@ -539,7 +539,7 @@ let promise = new MyPromise((resolve, reject) => {
     resolve('success')
     // throw new Error('执行器错误')
  })
- 
+
 // 第一个then方法中的错误要在第二个then方法中捕获到
 promise.then(value => {
   console.log(1)
@@ -602,7 +602,7 @@ let promise = new MyPromise((resolve, reject) => {
     // resolve('success')
     throw new Error('执行器错误')
  })
- 
+
  // 第一个then方法中的错误要在第二个then方法中捕获到
  promise.then(value => {
   console.log(1)
@@ -740,7 +740,7 @@ let promise = new MyPromise((resolve, reject) => {
     resolve('succ')
   },2000)
 })
- 
+
  promise.then(value => {
   console.log(1)
   console.log('resolve', value)
@@ -811,7 +811,7 @@ const MyPromise = require('./myPromise')
 let promise = new MyPromise((resolve, reject) => {
   resolve('succ')
 })
- 
+
 promise.then().then().then(value => console.log(value))
 
 // succ
@@ -823,7 +823,7 @@ const MyPromise = require('./myPromise')
 let promise = new MyPromise((resolve, reject) => {
   reject('err')
 })
- 
+
  promise.then().then().then(value => console.log(value), reason => console.log(reason))
 
 // err

@@ -45,12 +45,10 @@ export default [
                     {text: 'Promise', link: '/advance/sourceCode/promise/'},
                     {text: 'Webpack', link: '/advance/sourceCode/webpack/01'},
                     {text: 'Snabbdom', link: '/frame/Vue/virtual-dom/03'},
-                    // TODO
-                    // {text: 'Vue', link: '/frame/Vue/vue-source-code/01'},
-                    // {text: 'vue-observe', link: '/frame/Vue/vue-observe/02'},
-                    // TODO
-                    // {text: 'vue-router', link: '/frame/Vue/vue-router/04'},
-                    {text: 'vuex', link: '/frame/Vue/Vuex/03vuex'},
+                    {text: 'Vue', link: '/frame/Vue/vue-source-code/01'},
+                    {text: 'vue-observe', link: '/frame/Vue/vue-observe/02'},
+                    {text: 'vue-router', link: '/frame/Vue/vue-router/04'},
+                    {text: 'vuex', link: '/frame/Vue/vuex/03vuex'},
                 ]
             },
         ]
@@ -59,8 +57,7 @@ export default [
         text: '框架', items:[
             { text: 'Vue', items: [
                 { text: 'Vue2', link: '/frame/Vue/'},
-                // TODO
-                // { text: 'Vue3', link: '/frame/Vue3/01vue3'},
+                { text: 'Vue3', link: '/frame/Vue3/01vue3'},
                 { text: 'SSR', link: '/frame/SSR/'},
             ]}
         ]
@@ -79,12 +76,12 @@ export default [
     },
     {
         text: '更多', items:[
-            // { text: 'Git', link: '/more/Git/01'},
-            // { text: 'AST', link: '/more/AST/01'},
-            // { text: '部署', link: '/more/deployment/'},
-            // { text: 'Docker', link: '/more/Docker/01'},
-            // { text: '计算机网络', link: '/more/Network/'},
-            // { text: 'Tools', link: '/more/tools/'},
+            { text: 'Git', link: '/more/Git/01'},
+            { text: 'AST', link: '/more/AST/01'},
+            { text: '部署', link: '/more/deployment/'},
+            { text: 'Docker', link: '/more/Docker/01'},
+            { text: '计算机网络', link: '/more/Network/'},
+            { text: 'Tools', link: '/more/tools/'},
         ]
     },
     // { text: '标签分类', link: '/tag/', icon: 'reco-category' },

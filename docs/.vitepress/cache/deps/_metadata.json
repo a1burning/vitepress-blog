@@ -1,43 +1,43 @@
 {
-  "hash": "b680e16b",
+  "hash": "b0ac603f",
   "configHash": "de0f8d9b",
-  "lockfileHash": "5043a5d0",
-  "browserHash": "3fdf987e",
+  "lockfileHash": "0f23b369",
+  "browserHash": "567a436b",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.4.29_typescript@5.4.5/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "bef7e958",
+      "fileHash": "88bae743",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.3.0_vue@3.4.29/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "750badf0",
+      "fileHash": "a2ad8cd3",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.29/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "403b8b03",
+      "fileHash": "8ced1eff",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/.pnpm/@vueuse+integrations@10.11.0_focus-trap@7.5.4_vue@3.4.29/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "5db4ac1b",
+      "fileHash": "f942c96e",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "927fe3e4",
+      "fileHash": "e183a951",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "75e25369",
+      "fileHash": "e6569e51",
       "needsInterop": false
     }
   },

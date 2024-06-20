@@ -20,7 +20,7 @@ sidebarDepth: 5
 ## JS实例
 
 - [实现前端点击按钮自动复制剪贴板功能](./copy/)
-- [js、jquery、html2canvas实现放大镜插件](./magnifier/01.md)
+- [js、jquery、html2canvas实现放大镜插件](./magnifier/01)
 
 ## CSS实例
 

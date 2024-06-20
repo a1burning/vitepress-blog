@@ -12,8 +12,8 @@ sidebarDepth: 5
 
 ## background
 
-- [background-size](./background/01background-size.md)
-- [Gradient渐变](./background/02gradient.md)
+- [background-size](./background/01background-size)
+- [Gradient渐变](./background/02gradient)
 
 ## whitespace
 
