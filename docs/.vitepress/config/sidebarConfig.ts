@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import { dirname, resolve, join, relative, basename, parse, extname } from 'path';
-import { statSync, readdirSync, readFileSync } from 'fs';
+import { statSync, readdirSync, readFileSync, existsSync } from 'fs';
 import yaml from 'js-yaml';
 
 type SidebarItem = {
@@ -45,9 +45,11 @@ function getFormattedPath(absolutePath) {
 }
 
 // 构建路径
-function buildPath(path) {
-    const dirPath = join(path, '../')
+function buildPath(absolutePath) {
+    // 如果路由存在说明是目录，取当前路径，如果不存在说明是md文件，取父路径
+    const dirPath = existsSync(absolutePath) ? absolutePath : join(absolutePath, '../')
     const currentDirName = basename(dirPath);
+
     const output: SidebarItem[] = [{
         text: currentDirName,
         items: [] as SidebarItem[]
@@ -75,7 +77,7 @@ function buildPath(path) {
 function selectLink(list, obj = {}) {
     list.forEach((link) => {
         if (link === '/') return;
-        let absolutePath = join(rootPath, link);
+        const absolutePath = join(rootPath, link);
         obj[link] = buildPath(absolutePath);
     })
     return obj;

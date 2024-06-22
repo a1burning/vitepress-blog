@@ -10,8 +10,6 @@ sidebarDepth: 5
 
 上一节介绍了`Vuex`的核心原理及简单使用，这里来一个实际案例
 
-![](/assets/images/vue/vuex/vuex02.png)
-
 ## 需求
 - 商品列表展示商品、价格和【加入购物车】按钮
     + 点击【加入购物车】按钮加入购物车，【我的购物车】提示数量增加
@@ -65,7 +63,7 @@ app.post('/checkout', (req, res) => {
 
 1. 在`store`文件夹中创建`modules`文件夹，创建两个模块`products.js`和`cart.js`
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e75b82f059d147e9a6eead558cbf71d2~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex12.png)
 
 2. 在`products.js`和`cart.js`文件中搭建基本结构
 
@@ -284,7 +282,7 @@ export default {
 
 3. 点开浏览器，可以点击加入购物车按钮，点开调试台可以看到数据的变化
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f383c4f39975438db623b9f97ce30c01~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex13.png)
 
 ### 我的购物车组件
 - 购买商品列表
@@ -328,7 +326,7 @@ export default {
 
 2. 打开浏览器，点击商品添加购物车，可以看到弹窗里有新加的商品
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7fda69ee95e14562a7e4e9d58194250e~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex14.png)
 
 #### 商品数量和统计功能
 
@@ -392,7 +390,7 @@ export default {
 
 3. 打开浏览器，添加两个商品，可以看到徽章和总计都发生了变化
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/21ec55d660794963abc336accdaca6c1~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex15.png)
 
 #### 删除购物车商品
 删除商品要修改`cart`模块中的`state`，所以要在`cart`模块中添加一个`mutation`
@@ -501,7 +499,7 @@ export default {
 
 2. 在浏览器中看，添加商品到我的购物车，购物车列表中有了对应的数据
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a3752e0553ba485b8d693c0c8577e29e~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex16.png)
 
 #### 全选操作
 - 点击子`checkbox`，选中变不选中，不选中变选中
@@ -676,7 +674,7 @@ export default {
 
 4. 在浏览器中查看，添加商品之后，修改数字，会有对应的商品数量和小计
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4235079dce3d410dac142a182db5ba95~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex17.png)
 
 #### 删除功能
 

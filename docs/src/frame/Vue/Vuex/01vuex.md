@@ -40,7 +40,7 @@ new Vue({
 - `view`：视图。通过把状态绑定到视图呈现给用户
 - `actions`：用户和视图交互改变状态的方式
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0941321564c040fbad89273d5f9bd9bd~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex1.png)
 
 图中表明，状态绑定到视图上呈现给用户，用户通过与视图交互改变状态，之后改变了的状态再绑定到视图会后呈现给用户。
 单向的数据流程很简单清晰，但是多个组件共享数据会破坏这种简单的结构。
@@ -185,7 +185,7 @@ export default {
 ### Vuex核心概念回顾
 下面这张图展示了`Vuex`的核心概念并且展示了`Vuex`的整个工作流程
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f29d03d72da14ab69ac695d7fd96425e~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex2.png)
 
 - **Store**：仓库，`Store`是使用`Vuex`应用程序的核心，每个应用仅有一个`Store`，它是一个容器，包含着应用中的大部分状态，当然我们不能直接改变`Store`中的状态，我们要通过提交`Mutations`的方式改变状态。
 - **State**：状态，保存在`Store`中，因为`Store`是唯一的，所以`State`也是唯一的，称为单一状态树，这里的状态是响应式的。
@@ -464,41 +464,41 @@ export default {
 #### Mutation的调试
 运行到`4`之后，这时看一下`devtools`看一下时光旅行和历史回滚，下面是初始状态
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d94827e64e91466f90ceaa908f5ccd46~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex3.png)
 
 点一下按钮之后就增加了一个记录，还显示了改变之后的数据
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8295943e58b84b55a30bd911c35540ee~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex4.png)
 
 如果数据不对，可以进行调试。
 
 ##### 时光旅行
 然后多点几下，进行时光旅行。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f5c10d50868c4d8e9f0dba1c0b8454a3~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex5.png)
 
 点击按钮之后，状态就变成了之前那个状态，这个功能也是为了方便调试
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4d983a547184cada554241a80fd7473~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex6.png)
 
 ##### 状态回滚
 这个图标就是状态回滚
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9658fa6735464f55b9f8bfefe3bdee62~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex7.png)
 
 点击之后，代码就回到了没有执行这一步的状态
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1ee64e60392940bbab21b3b5fb9c1266~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex8.png)
 
 
 ##### 提交改变
 下面那个按钮的意思是将这次提交作为最后一次提交
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e9a74882b0e740d29afa33743964888b~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex9.png)
 
 点击之后，`base State`变成了那次的状态，其他的状态以这个作为起始点
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/39a8739db98c45969d5f6f2a25066728~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex10.png)
 
 ### Actions的使用
 如果有异步的修改，需要使用`actions`，在`actions`中可以执行异步操作，当异步操作结束后，如果需要更改状态，还需要提交`Mutation`。
@@ -716,7 +716,7 @@ export default new Vuex.Store({
 
 3. 点击按钮内容改变，但是控制台会抛出错误
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/33acf0eb758a44ad8494a4688a0906b5~tplv-k3u1fbpfcp-watermark.image)
+![](/assets/images/vue/vuex/vuex11.png)
 
 > 注意：不要在生产环境开启严格模式，因为严格模式会深度检测状态树，会影响性能。在开发模式中开启严格模式，在生产环境中关闭严格模式
 >

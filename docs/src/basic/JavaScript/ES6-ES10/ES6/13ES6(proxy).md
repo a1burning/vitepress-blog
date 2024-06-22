@@ -1,12 +1,11 @@
 ---
 title: ES6（十三）—— Proxy
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./12ES6(reflect).md
-next: ./14ES6(generator).md
 sidebarDepth: 5
 ---
+# ES6（十三）—— Proxy
 ## Proxy
 在 `ES6` 标准中新增的一个非常强大的功能是 `Proxy`，它可以自定义一些常用行为如**查找、赋值、枚举、函数调用**等。通过 `Proxy` 这个名称也可以看出来它包含了“代理”的含义，只要有“代理”的诉求都可以考虑使用 `Proxy` 来实现。
 
@@ -138,7 +137,7 @@ let d = new Proxy(o, {
           return false
         } else {
           target[key] = value
-        } 
+        }
       } else {
         target[key] = value
       }
@@ -169,7 +168,7 @@ let validator = (target, key, value) => {
         return false
       } else {
         target[key] = value
-      } 
+      }
     } else {
       target[key] = value
     }
@@ -226,7 +225,7 @@ let validator = (target, key, value) => {
         throw new TypeError('price exceed 300')
       } else {
         target[key] = value
-      } 
+      }
     } else {
       target[key] = value
     }
@@ -401,7 +400,7 @@ const personProxy = new Proxy(person, {
     console.log('delete ' + property) // delete age
     delete target[property]
   }
-}) 
+})
 
 delete personProxy.age
 

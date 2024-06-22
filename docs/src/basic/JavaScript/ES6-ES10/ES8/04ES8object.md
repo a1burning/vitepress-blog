@@ -1,12 +1,11 @@
 ---
 title: ES8(四) —— Object.getOwnPropertyDescriptor()
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./03ES8string.md
-next: ./05ES8.md
 sidebarDepth: 5
 ---
+# ES8(四) —— Object.getOwnPropertyDescriptor()
 ## ES8如何获取Object的描述符
 `Object.getOwnPropertyDescriptor()`只能获取对象属性的描述符但是不能对其进行修改
 ### 设置描述符使用defineProperty()

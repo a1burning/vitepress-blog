@@ -1,12 +1,11 @@
 ---
 title: ES7(二) —— pow
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./01ES7includes.md
-next: ../ES8/01ES8async.md
 sidebarDepth: 5
 ---
+# ES7(二) —— pow
 ## 数学运算Math：pow乘方运算
 ES5 pow
 ```js

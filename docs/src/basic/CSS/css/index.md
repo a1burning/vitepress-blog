@@ -1,14 +1,13 @@
 ---
-title: CSS目录导航
+title: CSS
 tags:
   - CSS
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# CSS
 ## 三大特性
 
-- [css的三大特性(层叠、继承、优先级)](./features/)
+- [css的三大特性](./features/)
 
 ## background
 

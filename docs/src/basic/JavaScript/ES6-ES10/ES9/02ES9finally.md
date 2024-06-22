@@ -1,12 +1,11 @@
 ---
 title: ES9(二) —— Promise.finally
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./01ES9forawaitof.md
-next: ./03ES9rest.md
 sidebarDepth: 5
 ---
+# ES9(二) —— Promise.finally
 ## Promise是如何“兜底”操作的?
 使用`Promise.finally`，无论执行`then`还是`catch`，都会执行`finally`里面的函数体。
 ​

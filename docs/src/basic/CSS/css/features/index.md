@@ -1,10 +1,11 @@
 ---
-title: css的三大特性(层叠、继承、优先级)
-tags: 
+title: css的三大特性
+tags:
   - CSS
 date: 2018-05-15
 sidebarDepth: 5
 ---
+# css的三大特性
 ## 层叠性
 
 `CSS(Cascading Style Sheets)`又称为层叠样式表，所以这个第一个特性就是层叠性。
@@ -49,12 +50,12 @@ sidebarDepth: 5
 
 然后会显示什么呢？
 
-![css1.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e6c9dbce5a5479fbfdbf5a96ae57304~tplv-k3u1fbpfcp-zoom-1.image)
+![css1.jpg](/assets/images/basic/css32.png)
 
 
 可能到这里显示的不是很明白，那么`F12`审查元素看一下：
 
-![cssstyle.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd5e357ad0ee40c09e9449c291c5de10~tplv-k3u1fbpfcp-zoom-1.image)
+![cssstyle.jpg](/assets/images/basic/css33.png)
 
 > **结论** :无论在同一个`div`中还是在不同的`div`中，后面的样式将前面的层叠掉了，所以这就是`css`的层叠性。
 
@@ -120,19 +121,19 @@ sidebarDepth: 5
 
 效果是什么呢？
 
-![inherited.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb1e610b85f44fc995db577a7d4b50d2~tplv-k3u1fbpfcp-zoom-1.image)
+![inherited.jpg](/assets/images/basic/css34.png)
 
 
 
 > **分析：**
-> 
+>
 > 用`F12`审查元素一下看看最里面的`<p>`，其中`<p>`的`color`属性继承自父亲`.son`
-> 
+>
 > `font-size\font-weight\text-align\line-height\white-space`继承自`.son`的父亲`.father`
-> 
+>
 > 可以看到下面继承的元素显示的颜色比较深，没有继承的元素灰掉
 
-![inherited1.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a868fb64b50470999cdec936502f401~tplv-k3u1fbpfcp-zoom-1.image)
+![inherited1.jpg](/assets/images/basic/css35.png)
 
 
 ## 优先级
@@ -225,7 +226,7 @@ sidebarDepth: 5
 ```
 效果：
 
-![demo1.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/697a038781fc4f398b918e749bf62d11~tplv-k3u1fbpfcp-zoom-1.image)
+![demo1.jpg](/assets/images/basic/css36.png)
 
 
 因为`a`标签和`h`标签都是特殊的标签，都有自己的样式，要想改变，就应该在其元素中定义将元素的样式层叠掉。
@@ -247,7 +248,7 @@ h1{
 
 效果：
 
-![demo2.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4ca77cf01784db38a83a6c1cebe6cb5~tplv-k3u1fbpfcp-zoom-1.image)
+![demo2.jpg](/assets/images/basic/css37.png)
 
 
 #### 面试题一
@@ -262,15 +263,15 @@ h1{
   #father #son{  /*0,2,0,0*/
     color:blue;
   }
-  
+
   #father p.c2{  /*0,1,1,1*/
     color:black;
   }
-  
+
   div.c1 p.c2{  /*0,0,2,2*/
     color:red;
-  } 
-  
+  }
+
   #father{  /*0,0,0,0*/
     color:green!important;
   }
@@ -286,7 +287,7 @@ h1{
   #father{  /*0,1,0,0*/
     color:red;
   }
-  
+
   p{  /*0,0,0,0*/
     color:blue;
   }
@@ -316,11 +317,11 @@ h1{
   .c1 .c2 div{  /*0,0,2,1*/
     color:blue;
   }
-  
+
   div #box3{  /*0,1,0,1*/
     color:green;
   }
-  
+
   #box1 div{  /*0,1,0,1*/
     color:yellow;
   }
@@ -341,7 +342,7 @@ div{
 
 <div></div>
 ```
-![demo3.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f95bedefae34390a8be25477cc048eb~tplv-k3u1fbpfcp-zoom-1.image)
+![demo3.jpg](/assets/images/basic/css38.png)
 
 
 #### min-width覆盖max-width，如果这两个发生冲突，最大的比最小的还要小，那么以哪个为准？
@@ -357,5 +358,5 @@ div{
 <div></div>
 ```
 
-![demo4.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db673fcc1ea34a2ba43a81609f2c5105~tplv-k3u1fbpfcp-zoom-1.image)
+![demo4.jpg](/assets/images/basic/css39.png)
 

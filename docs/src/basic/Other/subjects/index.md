@@ -11,7 +11,6 @@ sidebarDepth: 5
 - [如何深浅拷贝数组](./js/js-deepClone/)
 - [JavaScript异步编程](./js/js-async/)
 - [JavaScript类型系统](./js/js-typeSystem/)
-- [JS工具函数总结](./js/js-tools/)
 
 ## CSS专题
 

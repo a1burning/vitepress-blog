@@ -1,13 +1,12 @@
 ---
 title: CSS三角的写法（兼容IE6）
-tags: 
+tags:
   - CSS
   - Example
 date: 2018-11-08
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# CSS三角的写法（兼容IE6）
 ## 简介
 三角的做法有好几种：
 >- 图片、精灵图（网易）
@@ -33,12 +32,12 @@ sidebarDepth: 5
 div{
     width:200px;
     height:100px;
-    border:10px solid red; 
+    border:10px solid red;
 }
 ```
 可以看到效果：
 
-![border.jpg](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7b08c14e3?w=248&h=141&f=jpeg&s=3254)
+<div style="width:200px;height:100px;border:10px solid red;"></div>
 
 
 ### 3. 给div的四个边框都设置不同的颜色
@@ -47,14 +46,14 @@ div{
     width:200px;
     height:100px;
     border-left:10px solid red;
-    border-top:10px solid green; 
-    border-right:10px solid blue; 
-    border-bottom:10px solid yellow; 
+    border-top:10px solid green;
+    border-right:10px solid blue;
+    border-bottom:10px solid yellow;
 }
 ```
 可以看到以下效果：
 
-![border1.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7b0cfa6bb?w=255&h=154&f=png&s=388)
+<div style="width:200px;height:100px;border-left:10px solid red;border-top:10px solid green;border-right:10px solid blue;border-bottom:10px solid yellow;"></div>
 
 
 可以看到两个border交叉的地方，有斜边存在。
@@ -64,22 +63,22 @@ div{
     width:0px;
     height:0px;
     border-left:10px solid red;
-    border-top:10px solid green; 
-    border-right:10px solid blue; 
-    border-bottom:10px solid yellow; 
+    border-top:10px solid green;
+    border-right:10px solid blue;
+    border-bottom:10px solid yellow;
 }
 
 /*也可以这么写*/
 div{
-    width:0px; 
+    width:0px;
     height:0px;
-    border:10px solid;   
+    border:10px solid;
     border-color:red green blue yellow;
 }
 ```
 可以看到以下效果：
 
-![border2.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7b0dd78ba?w=71&h=71&f=png&s=254)
+<div style="width:0px;height:0px;border:10px solid;border-color:red green blue yellow;"></div>
 
 
 这个时候就看得很明显了，出现了四个三角。那如果要出现一个，那么就将其他的三个弄成透明色就可以了。
@@ -90,23 +89,23 @@ div{
 这里的设置也遵循 **上右下左** 的顺序，把不需要的角弄成透明色。
 ```css
 div{
-    width:0px; 
+    width:0px;
     height:0px;
-    border-width:10px;   
+    border-width:10px;
     border-color:#f00 transparent transparent transparent;
     border-style:solid;
 }
 
 /*也可以再进行合并*/
 div{
-    width:0px; 
+    width:0px;
     height:0px;
-    border:10px solid;   
+    border:10px solid;
     border-color:#f00 transparent transparent transparent;
 }
 ```
 
-![bingo.jpg](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7b0d32505?w=72&h=64&f=jpeg&s=527)
+<div style="width:0px;height:0px;border:10px solid;border-color:#f00 transparent transparent transparent;"></div>
 
 
 这样一个三角就完成了。
@@ -115,7 +114,7 @@ div{
 ### 6. 兼容IE6浏览器
 同样的一个三角，在IE6的显示是什么呢？
 
-![IE6.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7b1022c2a?w=208&h=156&f=png&s=319)
+![IE6.png](/assets/images/basic/triangle0.png)
 
 
 #### 造成这样的原因是：
@@ -140,9 +139,9 @@ div{
 
 ```css
 div{
-    border:solid 1px transparent; 
-    _border-color:tomato; 
-    _filter:chroma(color=tomato); 
+    border:solid 1px transparent;
+    _border-color:tomato;
+    _filter:chroma(color=tomato);
 }
 ```
 所以我觉得用在这里也可以，**BUT没有亲测过，如果哪位小可爱测过可以请告知我^ ^。**
@@ -154,7 +153,7 @@ div{
     border-width:10px;
     border-style:solid;
     border-color:#f00 transparent transparent transparent;
-    _border-color:#f00 tomato tomato tomato; 
+    _border-color:#f00 tomato tomato tomato;
     _filter:chroma(color=tomato);
 }
 ```
@@ -187,13 +186,13 @@ em{
 ```
 可以看到页面是这个样子的:
 
-![inline.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7b1150ff2?w=167&h=162&f=png&s=1246)
+![inline.png](/assets/images/basic/triangle1.png)
 
 
 为什么是这个样子的，那么我们再看的仔细一点。
 它实际是这个样子的。
 
-![inline2.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7cf442467?w=119&h=167&f=png&s=683)
+![inline2.png](/assets/images/basic/triangle2.png)
 
 
 >造成这样的原因<br/>
@@ -261,13 +260,18 @@ div{
 ```
 改变border-width,三角变大，是不失真的。很清晰。
 
-==**三角制作完成**。==
+**三角制作完成**
 
 ## 扩展
 ### 有角度的三角
 上面制作的都是45度的三角，三角可以通过border的高度宽度确定角度。
 
-![有角度的三角.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7cfba84bd?w=126&h=96&f=png&s=221)
+<div style="width: 0px;
+	height: 0px;
+	margin: 100px auto;
+	border-width:10px 30px;
+	border-color:transparent transparent transparent red;
+	border-style:solid;"></div>
 
 
 比如这样一个三角，只需要确定上下的和左右的宽度不一样即可。
@@ -284,8 +288,11 @@ div{
 ```
 
 ### 有一个角是直角的三角
-![有一个角是直角的三角.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7d4e34e16?w=74&h=78&f=png&s=238)
 
+<div style="width: 0;
+	border-width: 20px 10px;
+	border-style: solid;
+	border-color: red red transparent transparent;"></div>
 
 观察可以看到，是上面和右面的三角同时设置成一个颜色。就会出现直角的三角。
 ```css
@@ -299,23 +306,34 @@ div{
 
 ### 箭头
 
-![箭头.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7d4d05d8f?w=134&h=101&f=png&s=362)
-
 
 其实原理也简单，就是两个三角重叠在一起。上面的三角就是背景的颜色
+
+<div style="border-width: 50px;
+	border-color: transparent transparent transparent #f40;
+	border-style: solid;
+	position: relative;">
+    <div style="border-width: 30px;
+        border-color: transparent transparent transparent #fff;
+        border-style: solid;
+        position: absolute;
+        left: -50px;
+        top: -30px;">
+    </div>
+</div>
 
 ```html
 <style type="text/css">
 .san {
 	border-width: 50px;
 	border-color: transparent transparent transparent #f40;
-	border-style: solid; 
+	border-style: solid;
 	position: relative;
 	}
 .si {
 	border-width: 30px;
 	border-color: transparent transparent transparent #fff;
-	border-style: solid; 
+	border-style: solid;
 	position: absolute;
 	left: -50px;
 	top: -30px;
@@ -329,7 +347,7 @@ div{
 ```
 
 ### 对话框
-![对话框.jpg](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7d5603992?w=217&h=103&f=jpeg&s=2655)
+![对话框.jpg](/assets/images/basic/triangle3.png)
 
 这个使用伪元素去做就很方便。
 ```html
@@ -343,12 +361,12 @@ div{
 	border-radius: 10px;
 	position: relative;
 }
-div::before{    
-    content:"";   
-    border-width: 10px; 
+div::before{
+    content:"";
+    border-width: 10px;
     border-color:transparent rgba(255, 236, 193, 0.72) transparent transparent;
-    border-style: solid; 
-    position: absolute;  
+    border-style: solid;
+    position: absolute;
     left: -20px;
     top: 10px;
 }
@@ -364,7 +382,7 @@ before是方向朝上的梯形，after是方向朝下的梯形。
 
 **注意不要太宽了，否则会变成切边矩形，这样就可以避免`border-radius`的兼容问题**
 
-![兼容IE8的小圆角矩形.png](https://user-gold-cdn.xitu.io/2018/11/8/166f2be7d5ebd01c?w=369&h=202&f=png&s=2176)
+![兼容IE8的小圆角矩形.png](/assets/images/basic/triangle4.png)
 
 
 ```html
@@ -403,7 +421,7 @@ div:after {
 大概原理图就是：
 将里面的旋转45度，外面的`overflow:hidden`即可
 
-![利用css3旋转来制作三角形.jpg](https://user-gold-cdn.xitu.io/2018/11/8/166f2bedc9a84f66?w=182&h=213&f=jpeg&s=3634)
+![利用css3旋转来制作三角形.jpg](/assets/images/basic/triangle5.png)
 
 
 ```html
@@ -433,6 +451,25 @@ div:after {
 	<s></s>
 </i>
 ```
+
+<i style="text-decoration: none;
+    font-style: normal;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;">
+    <s style="text-decoration: none;
+		font-style: normal;
+		display: block;
+		width: 20px;
+		height: 20px;
+        position: absolute;
+		top:-14px;
+		background: yellowgreen;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);"></s>
+</i>
 
 最终效果图是：
 

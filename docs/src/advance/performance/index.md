@@ -7,10 +7,9 @@ tags:
   - V8
   - Performance
 date: 2020-12-13
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# 前端性能优化
 ## 前端内存管理及垃圾回收机制
 
 - [内存管理及垃圾回收](./GC/01)

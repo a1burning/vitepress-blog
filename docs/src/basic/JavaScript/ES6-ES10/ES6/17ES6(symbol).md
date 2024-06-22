@@ -1,14 +1,13 @@
 ---
 title: ES6（十七）—— Symbol
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./16ES6(modules).md
-next: ../ES7/01ES7includes.md
 sidebarDepth: 5
 ---
+# ES6（十七）—— Symbol
 ## 简介
-一种全新的原始数据类型，js的基本数据类型。**不那么深入，就先简单记个笔记
+一种全新的原始数据类型，js的基本数据类型。不那么深入，就先简单记个笔记
 
 ## 为什么要有这个数据类型
 之前当不一样的文件中，对同一个变量进行操作的时候，会有污染的情况，所以为了解决这种问题，约定俗称会在属性名中添加文件名。
@@ -20,7 +19,7 @@ const obj = {
   [Symbol.toStringTag]: 'XObject'
 }
 
-console.log(obj.toString()) // [object XObject] 
+console.log(obj.toString()) // [object XObject]
 ```
 
 ### 更适合做私有属性，因为普通的遍历是访问不到的

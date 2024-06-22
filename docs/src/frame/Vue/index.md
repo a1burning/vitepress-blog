@@ -2,8 +2,6 @@
 title: Vue
 tags:
   - Vue
-prev: false
-next: false
 sidebarDepth: 5
 ---
 

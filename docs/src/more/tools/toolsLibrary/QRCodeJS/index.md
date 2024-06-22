@@ -1,6 +1,6 @@
 ---
 title: QRCode.js生成二维码插件
-tags: 
+tags:
   - Tools
 date: 2018-11-22
 sidebarDepth: 5
@@ -49,7 +49,7 @@ var qrcode = new QRCode('qrcode', {
 
 ### 4.页面预览
 这样就很简单的生成了一个二维码
-![qrcode.jpg](https://user-gold-cdn.xitu.io/2018/11/22/1673bb0b207e6c91?w=278&h=271&f=jpeg&s=15536)
+![qrcode.jpg](/assets/images/more/tools/qrcode.png)
 
 ## 参数API
 ### QRCode参数
@@ -109,7 +109,9 @@ qrcode.madkCode('new content');
 由于很简单，所以就不贴代码了。
 
 #### 注意
->如果传的是url，但是打开的时候只是一堆字符串让手动复制，那么说明url的地址不正确。
-如果是微信，传的url的地址中有中文是可以识别的，但是在QQ中是不行的
-所以其中的中文要进行encodeURIComponent编码，但是不要整体都编码，只是中文的部分编码即可。
+:::warning
+- 如果传的是url，但是打开的时候只是一堆字符串让手动复制，那么说明url的地址不正确。
+- 如果是微信，传的url的地址中有中文是可以识别的，但是在QQ中是不行的
+- 所以其中的中文要进行 `encodeURIComponent` 编码，但是不要整体都编码，只是中文的部分编码即可。
+:::
 

@@ -7,8 +7,8 @@ sidebarDepth: 5
 # 开发工具
 ## Node
 - nodemon ： [nodemon](./node/nodemon/)
-- nrm ： [nodemon](./node/nrm/)
-- nvm ： [nodemon](./node/nvm/)
+- nrm ： [nrm](./node/nrm/)
+- nvm ： [nvm](./node/nvm/)
 
 ## Windows
 - WSL ： [WSL](./windows/WSL)

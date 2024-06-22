@@ -1,12 +1,11 @@
 ---
 title: ES6（四）—— Class
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./03ES6(array).md
-next: ./05ES6(function).md
 sidebarDepth: 5
 ---
+# ES6（四）—— Class
 ## 类的使用【声明、属性、方法、继承】
 
 ## Basic Syntax —— 怎么声明一个类？
@@ -191,7 +190,7 @@ class Animal {
     }
     // 对象实例方法，类中直接定义方法就是实例对象的方法
     eat () {
-        Animal.walk() 
+        Animal.walk()
         console.log(this) // 这里的类指的是Animal,不能在这里使用this.type，因为Animal上面没有type属性，其原型对象上有type属性
         console.log('i am eat food')
     }
@@ -278,13 +277,13 @@ class Monkey extends Animal {
 class Dog extends Animal {
     constructor (type) {
         // super必须在构造函数第一行，否则报错，而且必须传参数
-        super(type) 
+        super(type)
         this.age = 2
     }
     hello () {
         // super对象始终指向父类，调用它就是调用了父类的构造函数
         super.eat()
-        console.log('and say hello')  
+        console.log('and say hello')
     }
 }
 

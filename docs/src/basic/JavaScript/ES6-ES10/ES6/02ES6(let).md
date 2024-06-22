@@ -1,12 +1,11 @@
 ---
 title: ES6（二）—— let 与 const
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./01ES6.md  
-next: ./03ES6(array).md
 sidebarDepth: 5
 ---
+# ES6（二）—— let 与 const
 ## let
 ### 解决var存在的问题
 let的出现是为了解决一些var存在的问题

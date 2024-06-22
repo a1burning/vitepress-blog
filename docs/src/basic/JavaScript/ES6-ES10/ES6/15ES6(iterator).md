@@ -1,12 +1,11 @@
 ---
 title: ES6（十五）—— Iterator
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./14ES6(generator).md
-next: ./16ES6(modules).md
 sidebarDepth: 5
 ---
+# ES6（十五）—— Iterator
 ## ES6如何让不支持遍历的结构可遍历？
 ```js
 let authors = {
@@ -80,7 +79,7 @@ authors[Symbol.iterator] = function () {
       console.log(values)
       //一开始values.length是0，如果是0就进入循环过程
       if (!values.length) {
-        if (keys.length) { 
+        if (keys.length) {
           values = allAuthors[keys[0]]
           keys.shift() //永远取第一个元素，用完之后进行弹出
         }

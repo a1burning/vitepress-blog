@@ -1,12 +1,11 @@
 ---
 title: ES6（十四）—— Generator
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./13ES6(proxy).md
-next: ./15ES6(iterator).md
 sidebarDepth: 5
 ---
+# ES6（十四）—— Generator
 ## Generator是做什么的
 1. 控制循环流程用的
 2. 最重要的作用是解决异步编程嵌套层级较深的问题。
@@ -211,7 +210,7 @@ console.log(l.next())//{value: 1, done: false}
 console.log(l.next())//{value: 1, done: false}
 console.log(l.next())//{value: 1, done: false}
 
-l.throw(new Error('ss')) 
+l.throw(new Error('ss'))
 // 抛出错误，执行catch
 console.log(l.next()) //{value: 1, done: false}
 ```
@@ -242,10 +241,10 @@ function * main () {
     try{
         const users = yield ajax('/api/users.json')
         console.log(users)
-        
+
         const posts = yield ajax('/api/posts.json')
         console.log(posts)
-        
+
         const urls = yield ajax('/api/urls.json')
         console.log(urls)
     } catch (e) {
@@ -334,7 +333,7 @@ function * draw (first = 1, second = 3, third = 5) {
       return false
     }
   }
-  
+
 }
 
 let d = draw()

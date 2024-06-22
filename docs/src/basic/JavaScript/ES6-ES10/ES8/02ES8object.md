@@ -3,10 +3,9 @@ title: ES8(二) —— Object （keys、values、entries）
 tags:
   - JavaScript
   - ES6
-prev: ./01ES8async
-next: ./03ES8string
 sidebarDepth: 5
 ---
+# ES8(二) —— Object （keys、values、entries）
 ## ES8新增对对象快速遍历的方法
 ### Object.keys()
 - 参数是目标对象

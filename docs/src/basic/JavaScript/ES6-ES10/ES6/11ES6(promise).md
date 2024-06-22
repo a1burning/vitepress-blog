@@ -1,12 +1,11 @@
 ---
 title: ES6（十一）—— Promise
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./10ES6(destructure).md
-next: ./12ES6(reflect).md
 sidebarDepth: 3
 ---
+# ES6（十一）—— Promise
 ## 说到Promise就不得不说道说道这 —— 回调地狱
 a => b => c => d
 
@@ -190,8 +189,8 @@ function loadScript (src) {
 loadScript('./1.js')
     .then(loadScript('./2.js'))
     .then(loadScript('./3.js'))
-    
-//不稳定输出    
+
+//不稳定输出
 // 1
 // 2
 // 3
@@ -218,7 +217,7 @@ loadScript('./1.js')
     }, (err) => {
         console.log(err)
     })
-    
+
 // 稳定输出
 // 1
 // 不稳定输出
@@ -272,7 +271,7 @@ ajax('/api/user.json')
   }).catch(function onRejected(error) {
     console.log('onRejected', error)
   })
-  
+
 // 相当于
 ajax('/api/user.json')
   .then(function onFulfilled(res) {
@@ -287,7 +286,7 @@ ajax('/api/user.json')
 - `.catch()`是对上一个`.then()`返回的`promise`进行处理，不过第一个`promise`的报错也顺延到了`catch`中
 - 而`then`的第二个参数形式，只能捕获第一个`promise`的报错，如果当前`then`的`resolve`函数处理中有报错是捕获不到的。
 
-**所以`.catch`是给整个`promise`链条注册的一个失败回调。推荐使用！！！！** 
+**所以`.catch`是给整个`promise`链条注册的一个失败回调。推荐使用！！！！**
 
 ```js
 function loadScript (src) {
@@ -311,7 +310,7 @@ loadScript('./1.js')
     .catch(err => {
         console.log(err)
     })
-// throw new Error 不要用这个方法，要用catch和reject，去改变promise的状态的方式    
+// throw new Error 不要用这个方法，要用catch和reject，去改变promise的状态的方式
 ```
 ### 全局对象上的unhandledrejection事件
 还可以在全局对象上注册一个`unhandledrejection`事件，处理那些代码中没有被手动捕获的`promise`异常，当然**并不推荐使用**。
@@ -374,7 +373,7 @@ Promise.reslove({
 function test (bool) {
     if (bool) {
         return new Promise((resolve,reject) => {
-            resolve(30) 
+            resolve(30)
         })
     } else {
         return Promise.resolve(42)

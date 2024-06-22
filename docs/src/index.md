@@ -6,7 +6,7 @@ layout: home
 hero:
   name: "狐七的个人博客"
   text: ""
-  tagline: 我努力向前，在看不到终点的路上，欣赏风景~
+  tagline: 热爱可抵岁月漫长~
   pageClass: blog-home
   actions:
     - theme: brand
@@ -52,12 +52,14 @@ features:
 .VPContent.is-home {
   position: relative;
 }
-.VPHome {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
+
+.VPMenu .VPMenuGroup .title {
+    color: var(--vp-c-brand-3);
+    font-weight: 700;
+}
+
+.vp-doc h3 {
+    margin-bottom: 16px;
 }
 
 @media (min-width: 640px) {
@@ -69,6 +71,13 @@ features:
 @media (min-width: 960px) {
   :root {
     --vp-home-hero-image-filter: blur(68px);
+  }
+  .VPHome {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
   }
 }
 </style>

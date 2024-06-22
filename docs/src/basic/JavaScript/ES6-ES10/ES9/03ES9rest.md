@@ -1,12 +1,11 @@
 ---
 title: ES9(三) —— Object.rest.spread
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./02ES9finally.md
-next: ./04ES9regexp.md
 sidebarDepth: 5
 ---
+# ES9(三) —— Object.rest.spread
 之前的`rest`只是应用于数组中，`ES9`给`Object`也新增了`rest`和`spread`方法。
 
 巧了，这两个方法的符号都是 —— `...` （俗称三个点）

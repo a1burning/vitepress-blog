@@ -1,12 +1,11 @@
 ---
 title: ES6（十六）—— Modules
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./15ES6(iterator).md
-next: ./17ES6(symbol).md
 sidebarDepth: 5
 ---
+# ES6（十六）—— Modules
 ## 模块这里，先简简单单讲些语法吧
 ## export、import
 使用export、import语法，记得要进行babel编译

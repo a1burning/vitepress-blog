@@ -1,24 +1,23 @@
 ---
 title: H5+CSS3实现说话气泡点击动画
-tags: 
+tags:
   - H5
   - CSS
   - Example
 date: 2018-11-07
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# H5+CSS3实现说话气泡点击动画
 ## 需求
 还是要先把需求拿出来。
 要求：
->1. 对话气泡要有动画，动画总共4秒 
+>1. 对话气泡要有动画，动画总共4秒
 >2. 在没有点击的时候，气泡每隔8秒出现一次
 >3. 在点击的时候，如果动画没有播放完毕就不执行，如果动画播放完毕，立即出现气泡
 
 然后还是把完成图拿出来，就是做成下面这个样子：
-![bubble.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d1d9fddda234ba687ce18d5010e9288~tplv-k3u1fbpfcp-zoom-1.image)
- 
+![bubble.gif](/assets/images/basic/bubble.gif)
+
 ## 思路
 1. 首先要制作气泡
 2. 其次使用css制作动画
@@ -26,7 +25,7 @@ sidebarDepth: 5
 
 ## 实现
 ### 半透明气泡制作
-![bubble.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e35b19244944e968557a42947ea25e6~tplv-k3u1fbpfcp-zoom-1.image)
+![bubble.png](/assets/images/basic/bubble0.png)
 
 #### html结构
 ```html
@@ -70,7 +69,7 @@ sidebarDepth: 5
 }
 
 //对话框的动画定义
-@-webkit-keyframes toast {  
+@-webkit-keyframes toast {
     8%{
         opacity: 0.8;
         -webkit-transform: scale(0.8);
@@ -192,5 +191,5 @@ $(document).ready(function(){
 })
 ```
 
-整体还是比较简单的，所以这里做一下记录。
+整体还是比较简单的。
 

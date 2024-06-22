@@ -1,19 +1,18 @@
 ---
 title: H5移动端弹幕动画实现
-tags: 
+tags:
   - H5
   - CSS
   - Example
 date: 2018-08-22
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# H5移动端弹幕动画实现
 ## 需求
 已知20条内容要有弹幕效果，分成三层，速度随机。
 先来看看效果:
 
-![小小弹幕效果.gif](https://user-gold-cdn.xitu.io/2018/8/22/16560de464f0183e?w=272&h=129&f=gif&s=851057)
+![小小弹幕效果.gif](/assets/images/basic/barrage0.gif)
 
 所以这里不考虑填写生成的。只是一个展现的效果。
 **如果要看填写生成的，请不要浪费Time**
@@ -22,7 +21,7 @@ sidebarDepth: 5
 1. 把单个内容编辑好，计算自身宽度，确定初始位置
 2. 移动的距离是屏幕宽度
 3. js动态的添加css动画函数，将高度、动画移动时间、动画延迟时间都用随机数控制
-![mind.png](https://user-gold-cdn.xitu.io/2018/8/22/16560de464bb64b5?w=993&h=543&f=png&s=11584)
+![mind.png](/assets/images/basic/barrage1.png)
 
 
 
@@ -43,7 +42,7 @@ sidebarDepth: 5
 		<img src="../../static/cutePresent/resource/avatar.png"/>
 		<span>丶鹿锅里面装着吴奶包今天提现<i>3Q币</i></span>
 	</div>
-</div>		
+</div>
 ```
 
 ### css样式
@@ -99,16 +98,16 @@ $(".barrage-div").each(function(index,value){   //遍历每条弹幕
     var width = $(value).width();   //获取当前弹幕的宽度
     var topRandom = Math.floor(Math.random() * 3) + 'rem';  //获取0,1,2的随机数  可根据情况改变
     $(value).css({"right":-width,"top":topRandom});  //将弹幕移动到屏幕外面，正好超出的位置
-    //拼写动画帧函数，记得每个ani要进行区分，宽度从自己的负宽度移动一整个屏幕的距离    
-    var keyframes = `\    
-        @keyframes ani${index}{   
+    //拼写动画帧函数，记得每个ani要进行区分，宽度从自己的负宽度移动一整个屏幕的距离
+    var keyframes = `\
+        @keyframes ani${index}{
             form{
                 right:${-width}px;
             }
             to{
                 right:${winWidth}px;
             }
-        }\    
+        }\
         @-webkit-keyframes ani${index}{
             form{
                 right:${-width}px;
@@ -116,9 +115,9 @@ $(".barrage-div").each(function(index,value){   //遍历每条弹幕
             to{
                 right:${winWidth}px;
             }
-        }`;      
+        }`;
     //添加到页面的head标签里面
-    $("<style>").attr("type","text/css").html(keyframes).appendTo($("head"));      
+    $("<style>").attr("type","text/css").html(keyframes).appendTo($("head"));
     //定义动画速度列表
     var aniList = [3,5,7,9,11];
     //取数组的随机数，0,1,2,3,4
@@ -128,9 +127,3 @@ $(".barrage-div").each(function(index,value){   //遍历每条弹幕
     $(value).css({"animation":`ani${index} ${aniList[aniTime]}s linear ${index * 1.5}s`,"-webkit-animation":`ani${index} ${aniList[aniTime]}s linear ${index * 1.5}s`});
 })
 ```
-之后看看浏览器的效果:
-![css.png](https://user-gold-cdn.xitu.io/2018/8/22/16560de465176e8d?w=394&h=418&f=jpeg&s=21056)
-
-![html.jpg](https://user-gold-cdn.xitu.io/2018/8/22/16560de465225c27?w=854&h=449&f=jpeg&s=126903)
-
-

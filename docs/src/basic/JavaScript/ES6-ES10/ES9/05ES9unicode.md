@@ -1,12 +1,11 @@
 ---
 title: ES9(五) —— Unicode Property Escapes
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./04ES9regexp.md
-next: ../ES10/01ES10.md
 sidebarDepth: 5
 ---
+# ES9(五) —— Unicode Property Escapes
 它按照字符的功能对字符进行分类，一个字符只能属于一个 `Unicode Property`。也就是说 `Property` 并不关心字符所属的语言，只关心字符的功能。
 ​
 可以将`Unicode property` 理解为字符组，将小写 `p` 改成大写，就是该字符组的排除型字符组。想想看 `\d` 匹配 `0-9` 这个字符组，而 `\D` 匹配 `0-9` 以外的字符组。

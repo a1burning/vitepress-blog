@@ -1,13 +1,12 @@
 ---
 title: Location对象
-tags: 
+tags:
   - JavaScript
   - BOM
 date: 2018-04-16
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# Location对象
 location——BOM对象之一，既是window对象的属性，又是document对象的属性，即：
 `window.location == document.location   结果为true`
 
@@ -32,68 +31,82 @@ location——BOM对象之一，既是window对象的属性，又是document对�
 | **origin** | 返回URL协议+服务器名称+端口号  （`location.origin ==  location.protocol + '//' + location.host`）                  |
 
 
-![location.png](https://user-gold-cdn.xitu.io/2018/4/16/162ca2b6758f6379?w=540&h=323&f=png&s=4705)
-
-![location1.png](https://user-gold-cdn.xitu.io/2018/4/16/162ca2b6756465c2?w=1227&h=515&f=png&s=17212)
-
-![location2.png](https://user-gold-cdn.xitu.io/2018/4/24/162f6a9b02e57902?w=524&h=79&f=png&s=1437)
+```js
+location.href
+// 'http://localhost:5173/basic/JavaScript/javascript/BOM/01location.html?abc=1#123'
+location.pathname
+// '/basic/JavaScript/ES6-ES10/'
+location.port
+// '5173'
+location.hash
+// '#123'
+location.host
+// 'localhost:5173'
+location.hostname
+// 'localhost'
+location.protocol
+// 'http:'
+location.search
+// '?abc=1'
+location.origin
+// 'http://localhost:5173'
+location.protocol + '//' + location.host
+// 'http://localhost:5173'
+```
 
 #### origin的兼容性说明
 origin不兼容IE8，所以要使用这个属性就要进行兼容性处理
 ```js
 var baseUrl;
-if (typeof location.origin === ‘undefined‘)
-{
+if (typeof location.origin === ‘undefined‘) {
    baseUrl = location.protocol + '//' + location.host;
-}
-else
-{
+} else {
    baseUrl = window.location.origin;
 }
 ```
 ### 属性使用
 #### 1. 获取地址栏传来的参数数据
 **定义函数**获取根据参数的键获得参数的值
+
 ```javascript
-function getQueryStringArgs(){
-          //取得查询字符串并去掉开头的问号
-          var qs = (location.search.length > 0 ? location.search.substring(1) : ""),
-          //保存数据的对象
-              args = {},
-          //取得每一项
-              items = qs.length ? qs.split("&") : [],
-              item = null,
-              name = null,
-              value = null,
-              
-          //在for循环中使用
-              i = 0,
-              len = items.length;
-        
-          //逐个将每一项添加到args对象中
-            for(i = 0 ; i < len ; i++){
-                item = items[i].split("=");
-                name = decodeURIComponent(item[0]);
-                value = decodeURIComponent(item[1]);
-                if(name.length){
-                    args[name] = value;
-                }
-            }
-            return args;
-      }
+function getQueryStringArgs() {
+    //取得查询字符串并去掉开头的问号
+    var qs = (location.search.length > 0 ? location.search.substring(1) : ""),
+    //保存数据的对象
+    args = {},
+    //取得每一项
+    items = qs.length ? qs.split("&") : [],
+    item = null,
+    name = null,
+    value = null,
+
+    //在for循环中使用
+    i = 0,
+    len = items.length;
+
+    //逐个将每一项添加到args对象中
+    for(i = 0 ; i < len ; i++){
+        item = items[i].split("=");
+        name = decodeURIComponent(item[0]);
+        value = decodeURIComponent(item[1]);
+        if(name.length){
+            args[name] = value;
+        }
+    }
+    return args;
+}
 ```
-**调用函数**获取值
+**调用函数** 获取值
 ```javascript
-  //假设字符串是?name=xiaoming&age=18
+//假设字符串是?name=xiaoming&age=18
 var args = getQueryStringArgs();
 console.log(args.name)   //xiaoming
 console.log(args.age)    //18
 ```
-试验一下百度搜索简书的连接
-![baidu.png](https://user-gold-cdn.xitu.io/2018/4/16/162ca2b67560fef1?w=463&h=213&f=png&s=2616)
 
 #### 2. 跳转页面(除了修改hash，其余都会跳转页面)
-以下的方式修改URL以后，浏览器的历史记录中就会生成一条新纪录，因此**用户通过单击‘后退’按钮都会导航到前一个页面**。
+以下的方式修改URL以后，浏览器的历史记录中就会生成一条新纪录，因此 **用户通过单击‘后退’按钮都会导航到前一个页面** 。
+
 ```javascript
 //修改location对象的属性都可以改变当前加载的页面，
 location.href = 'https://www.baidu,com';
@@ -127,20 +140,21 @@ location.port = 8080';
 | reload()  | **重新加载**当前显示的页面：<br/>参数：无 —— 就会使用最有效的方式重新加载页面，可能从浏览器缓存中重新加载。<br/>参数：true —— 那么就会强制从服务器重新加载。 |
 
 ### 方法使用
+
 #### assign()
 ```javascript
-  location.assign('http://www.baidu.com')；
+location.assign('http://www.baidu.com')；
 ```
 注：如果是修改window.location和location.href，也会以修改的值去调用assign()，效果是完全一样的。
 
 #### replace()不可跳转
 ```javascript
-  location.replace('http://www.baidu.com');
+location.replace('http://www.baidu.com');
 ```
 
 #### reload()
 ```javascript
-  location.reload();  //有可能从缓存中加载
-  location.reload(true);  //从服务器重新加载
+location.reload();  //有可能从缓存中加载
+location.reload(true);  //从服务器重新加载
 ```
 

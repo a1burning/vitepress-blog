@@ -1,13 +1,12 @@
 ---
 title: JS、Jquery的属性操作方法总结
-tags: 
+tags:
   - JavaScript
   - Jquery
 date: 2018-10-09
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# JS、Jquery的属性操作方法总结
 ## 属性分为三种：
 1. html标签特性，例如普通的class，input中的name等
 2. 用户自定义属性，div中设置的cmd、time属性等
@@ -125,7 +124,7 @@ if(example.dataset.id){
 #### dataset的问题
 ##### 1. 兼容问题
 
-![兼容问题](https://user-gold-cdn.xitu.io/2018/10/9/16658372c25c2986?w=1240&h=521&f=png&s=129071)
+[兼容问题 - can i use - dataset](https://caniuse.com/mdn-api_svgelement_dataset)
 
 一些浏览器如`IE11-,andriod 2.3-,ios10-`是没有dataset这个对象的，所以如果要兼容低版本的浏览器，需要加上兼容代码：
 
@@ -138,7 +137,7 @@ if(example.dataset){
 ```
 
 ##### 2. 值类型问题
-dataset和attribute设置的数值就算是true、123、[1,2,3]，在读取的时候仍然是==字符串类型== 
+dataset和attribute设置的数值就算是true、123、[1,2,3]，在读取的时候仍然是==字符串类型==
 
 ```js
 var example = document.getElementById("example");
@@ -167,7 +166,7 @@ example.getAttribute("data-id-name"); //"hello"
 ```
 
 ## jquery属性方法操作
-- 获取和设置属性 attr() 
+- 获取和设置属性 attr()
 - 删除属性 removeAttr()
 - 获取和设置特性 prop()
 - 删除特性 removeProp()
@@ -177,7 +176,7 @@ example.getAttribute("data-id-name"); //"hello"
 ### 获取和设置属性 attr()
 #### 获取属性
 **方法**
-> `$div.attr(attribute);`<br/> 
+> `$div.attr(attribute);`<br/>
 > - 传一个参数是获取元素属性的值<br/>
 > - 参数是“属性名”<br/>
 > - 用attr获取的属性值，无论设置的时候是什么，都**返回string字符串类型**
@@ -193,14 +192,14 @@ var dataTitleValue = $div.attr("data-title"); //获取data-title属性值
 
 #### 设置属性
 **方法**
-> 设置单个属性值<br/> 
-> `$div.attr(attribute,value);`<br/> 
+> 设置单个属性值<br/>
+> `$div.attr(attribute,value);`<br/>
 > - 传两个参数是设置元素属性的值<br/>
 > - 参数1是要设置的**属性名**<br/>
 > - 参数2是要设置的**属性值**<br/>
 
-> 设置多个属性值<br/> 
-> `$div.attr({attribute1:value,attribute2:value});`<br/> 
+> 设置多个属性值<br/>
+> `$div.attr({attribute1:value,attribute2:value});`<br/>
 > - 传一个json对象，里面的属性分别是键/值<br/>
 
 **栗子**
@@ -229,7 +228,7 @@ var dataTitleValue = $div.attr("data-title","ohhh");
 
 ### 删除属性  removeAttr()
 **方法1**
-> `$div.removeAttr(attribute);`<br/> 
+> `$div.removeAttr(attribute);`<br/>
 > - 传一个参数是删除特定属性<br/>
 > - 参数是“属性名”<br/>
 
@@ -275,7 +274,7 @@ attr("title","")
 
 #### 获取属性
 **方法**
-> `$div.prop(property);`<br/> 
+> `$div.prop(property);`<br/>
 > - 传一个参数是获取元素属性的值<br/>
 > - 参数是“属性名”<br/>
 > - 用attr获取的属性值，无论设置的时候是什么，都==返回string字符串类型==
@@ -288,14 +287,14 @@ var titleValue = $div.prop("title"); //获取title属性值
 
 #### 设置属性
 **方法**
-> 设置单个属性值<br/> 
-> `$div.prop(property,value);`<br/> 
+> 设置单个属性值<br/>
+> `$div.prop(property,value);`<br/>
 > - 传两个参数是设置元素属性的值<br/>
 > - 参数1是要设置的**属性名**<br/>
 > - 参数2是要设置的**属性值**<br/>
 
-> 设置多个属性值 **(zepto不支持)**<br/> 
-> `$div.prop({property1:value1,property2:value2});`<br/> 
+> 设置多个属性值 **(zepto不支持)**<br/>
+> `$div.prop({property1:value1,property2:value2});`<br/>
 > - 传一个json对象，里面的属性分别是键/值<br/>
 
 **栗子**
@@ -309,7 +308,7 @@ var titleValue = $div.prop("title");
 
 ### 删除属性  removeProp()
 **方法1**
-> `$div.removeProp(property);`<br/> 
+> `$div.removeProp(property);`<br/>
 > - 传一个参数是删除特定属性<br/>
 > - 参数是“属性名”<br/>
 > - 删除之后此属性值为undefined;
@@ -327,7 +326,7 @@ var titleValue = $div.prop("title");
 ### 特别说明（prop必看）
 **prop()方法主要针对于html的固有属性**，所以就会有在读取属性值的时候，很多时候是读不到的。那我们可以用prop读的范围有哪些？
 
-标签 | property 
+标签 | property
 :---:|:---:
 html | lang,id,class,style,title,tabIndex
 div | id,class,style,title,tabIndex
@@ -360,10 +359,10 @@ element | 属性 | example | attr | prop
 ### 获取和设置自定义属性 data()
 #### 获取自定义属性
 **方法**
-> `$div.data(attribute);`<br/> 
+> `$div.data(attribute);`<br/>
 > - 传一个参数是获取元素属性的值，如果没有参数获取的是元素全部属性键值对组成的对象<br/>
 > - 参数是“属性名”<br/>
-> - 用attr获取的属性值，存的时候是什么类型的值，就是什么类型的值（包括数组和对象） 
+> - 用attr获取的属性值，存的时候是什么类型的值，就是什么类型的值（包括数组和对象）
 
 **栗子**
 ```js
@@ -391,7 +390,7 @@ console.log($div.data());
 **注意** undefined是不认可的属性值，如果第二个值传undefined，视为不传值，变为获取属性。
 ##### 设置单个属性值
 **方法1**
-> `$div.data(key,value);`<br/> 
+> `$div.data(key,value);`<br/>
 > - 传两个参数是设置元素属性的值<br/>
 > - 参数1是要设置的==属性名==<br/>
 > - 参数2是要设置的==属性值==,可以是的那个的值，也可以传obj<br/>
@@ -408,7 +407,7 @@ var timeValue = $div.data("time");
 ```
 
 **方法2**
-> `$div.data(obj);`<br/> 
+> `$div.data(obj);`<br/>
 > - 传一个对象参数是设置元素属性的值<br/>
 > - 参数中的键是要设置的==属性名==，值是要设置的==属性值==<br/>
 
@@ -422,7 +421,7 @@ var titleValue = $div.data("title");
 
 ##### 设置多个属性值
 **方法**
-> `$div.data({key1:value1,key2:value2});`<br/> 
+> `$div.data({key1:value1,key2:value2});`<br/>
 > - 传一个json对象，里面的属性分别是键/值<br/>
 
 **栗子**
@@ -437,10 +436,10 @@ var timeValue = $div.data("time");
 
 ### 删除自定义属性 removeData()
 **方法**
-> `$div.removeData(key);`<br/> 
+> `$div.removeData(key);`<br/>
 > - 传一个参数是删除特定属性<br/>
 > - 参数是“属性名”<br/>
-> - 删除之后此属性值为undefined; 
+> - 删除之后此属性值为undefined;
 
 **栗子**
 ```js
@@ -524,6 +523,4 @@ $div.data("houhou");
 对于HTML元素本身就带有的固有属性，在处理时，使用prop(),removeProp()。 <br/>
 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr(),removeAttr()。<br/>
 
-attr与prop区别
-http://www.cnblogs.com/Showshare/p/different-between-attr-and-prop.html
-
+[attr与prop区别](http://www.cnblogs.com/Showshare/p/different-between-attr-and-prop.html)

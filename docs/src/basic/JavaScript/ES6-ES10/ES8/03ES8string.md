@@ -1,12 +1,11 @@
 ---
 title: ES8(三) —— String Padding
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./02ES8object.md
-next: ./04ES8object.md
 sidebarDepth: 5
 ---
+# ES8(三) —— String Padding
 ## ES5对String补白的方式
 补白即**格式化**，例如将数字都输出成两位数，前面0补位
 

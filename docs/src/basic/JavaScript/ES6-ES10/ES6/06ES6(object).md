@@ -1,12 +1,11 @@
 ---
 title: ES6（六）—— Object
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./05ES6(function).md
-next: ./07ES6(setmap).md
 sidebarDepth: 5
 ---
+# ES6（六）—— Object
 ## Object属性可以简写吗？
 ### 声明一个object，key和value一样可以省略
 ```js
@@ -85,8 +84,8 @@ obj.hello() // （输出为空）
 ><br/>
 > target 是目标对象 必选<br/>
 > sources 是源对象 非必选<br/>
-> 此方法用域将所有可枚举属性的值从一个或多个源对象复制到目标对象，它将返回目标对象 **(浅复制)** 
-> 
+> 此方法用域将所有可枚举属性的值从一个或多个源对象复制到目标对象，它将返回目标对象 **(浅复制)**
+>
 
 ### 如果source和target有相同属性
 如果是0个源对象，则直接返回目标对象，如果对象有相同的属性，那么源对象的属性会覆盖掉目标对象中的属性
@@ -163,7 +162,7 @@ console.log(obj) //   { name: 'global obj' }
 ```
 ### 有点缺陷？
 上面那个方法是有缺陷的:<br/>
-**当赋值引用类型的值的时候，直接替换地址而不管里面的值** 
+**当赋值引用类型的值的时候，直接替换地址而不管里面的值**
 ```js
 const target = {
     a: {
@@ -206,7 +205,7 @@ console.log(target)
 // 如果target是空对象或者和source对象严格格式相同时进行了替换感觉没啥问题，但是上面的式子可以看出来，Object.assign进行的是浅拷贝，当复制的是引用类型，那么会将地址整体进行替换。所以h并没有保留。
 ```
 
-解决方式 ——> **Object.assign + 递归** 
+解决方式 ——> **Object.assign + 递归**
 
 ## 对象扩展方法 —— Object.is()
 

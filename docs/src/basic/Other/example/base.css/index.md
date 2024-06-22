@@ -1,13 +1,12 @@
 ---
 title: 页面的基础样式base.css
-tags: 
+tags:
   - CSS
   - Example
 date: 2018-01-17
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# 页面的基础样式base.css
 这玩意，俗称base.css
 几乎所有的页面，在搭建之前，都要用下面那个。BUT
 ```css
@@ -191,7 +190,7 @@ input,img{
     padding: 0;
     border: 0 none;
     outline-style: none;
-    vertical-align: bottom; 
+    vertical-align: bottom;
 }
 
 /*行内元素*/
@@ -216,7 +215,7 @@ textarea{
 
 i{
     /*文字样式*/
-    font-style: normal; 
+    font-style: normal;
 }
 
 table{
@@ -319,5 +318,4 @@ input[type="number"]+div > .count_subtract{
 ```
 
 这样，在页面中直接引入base.css就可以啦。
-是不是很方便？
 

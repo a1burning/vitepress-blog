@@ -1,11 +1,11 @@
 ---
 title: WSL开发环境
-tags: 
+tags:
   - Tools
 date: 2022-1-30
 sidebarDepth: 5
 ---
-
+# WSL开发环境
 windows terminal，微软官方出的一个命令行工具。WSL。
 
 Windows + Linux + WSL

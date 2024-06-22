@@ -1,34 +1,34 @@
 ---
 title: 使用canvas压缩图片大小
-tags: 
+tags:
   - Canvas
   - H5
   - Example
 date: 2019-08-02
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# 使用canvas压缩图片大小
 ## 问题来源
 这个问题，源于上传图片文件的时候，后台限制了2MB的大小，but在调起相机拍照的时候分分钟超过了2MB,为了不影响用户体验和功能需求，需要前端对大小进行压缩，然后传到后台。
 
 ## 思路分析
 找了很多资料，发现只有canvas可以对图片进行压缩处理。
 
-原理大概就是：
-1、先将图片的file文件转成baseURL
-2、创建一个image标签去接收文件获取图片的宽高和比例。
-3、创建canvas画布设置画布的大小。
-4、将图片绘制到canvas上面。
-5、对canvas进行压缩处理，获得新的baseURL
-6、将baseURL转化回文件。
+:::tip 原理
+1. 先将图片的file文件转成baseURL
+2. 创建一个image标签去接收文件获取图片的宽高和比例。
+3. 创建canvas画布设置画布的大小。
+4. 将图片绘制到canvas上面。
+5. 对canvas进行压缩处理，获得新的baseURL
+6. 将baseURL转化回文件。
+:::
 
 ## 前提的函数
 ### 将file文件转化为base64
 ```js
 /**
-* @param {二进制文件流} file 
-* @param {回调函数，返回base64} fn 
+* @param {二进制文件流} file
+* @param {回调函数，返回base64} fn
 */
 function changeFileToBaseURL(file,fn){
   // 创建读取文件对象
@@ -48,8 +48,8 @@ function changeFileToBaseURL(file,fn){
 ```js
 /**
  * 将base64转换为文件
- * @param {baseURL} dataurl 
- * @param {文件名称} filename 
+ * @param {baseURL} dataurl
+ * @param {文件名称} filename
  * @return {文件二进制流}
 */
 function dataURLtoFile(dataurl, filename) {
@@ -66,7 +66,7 @@ function dataURLtoFile(dataurl, filename) {
 ```js
 /**
 * canvas压缩图片
-* @param {参数obj} param 
+* @param {参数obj} param
 * @param {文件二进制流} param.file 必传
 * @param {目标压缩大小} param.targetSize 不传初始赋值-1
 * @param {输出图片宽度} param.width 不传初始赋值-1，等比缩放不用传高度
@@ -152,7 +152,7 @@ $("#fileImg").on('change',function(){
      succ:function(resultFile){
          //如果不是null就是压缩成功
          if(resultFile){
-           //TODO
+           // 逻辑处理
         }
      }
   })
@@ -168,13 +168,4 @@ $("#fileImg").on('change',function(){
 - 如果目标大小比较小，图片如何进行压缩都不能满足条件的时候，会造成循环无法跳出，浪费资源。
 - 如果图片进行几次压缩之后，文件大小不会改变了，有的时候还会增加，奇奇怪怪。
 所以就放弃了递归。
-
-### ios拍摄方向问题
-因为ios调起系统相机拍照是逆时针旋转了90度。
-而在我压缩图片之后传到后台，发现图片的exif信息的拍摄方向丢失，导致ios上传的图片都是逆时针旋转了90度。这个问题安卓不曾发现。
-
-![image.png](https://user-gold-cdn.xitu.io/2019/8/2/16c506706b3bd4f8?w=259&h=145&f=png&s=1900)
-
-目前有些怀疑，是base64转化成file文件的时候，丢失的。
-之后验证后会在这里进行补充说明。
 

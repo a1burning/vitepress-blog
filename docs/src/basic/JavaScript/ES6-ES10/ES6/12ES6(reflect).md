@@ -1,12 +1,11 @@
 ---
 title: ES6（十二）—— Reflect
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./11ES6(promise).md
-next: ./13ES6(proxy).md
 sidebarDepth: 5
 ---
+# ES6（十二）—— Reflect
 ## 反射，什么是反射机制？
 【`java`的反射机制】是在编译阶段不知道是哪个类被加载，而是在运行的时候才加载、执行。
 `js`中的`apply`就是反射机制。

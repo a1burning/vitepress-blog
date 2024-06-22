@@ -1,13 +1,12 @@
 ---
 title: ES6（三）—— 数组
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./02ES6(let).md  
-next: ./04ES6(class).md
 sidebarDepth: 5
 displayAllHeaders: true
 ---
+# ES6（三）—— 数组
 ## 数据的重要功能【遍历、转换、生成、查找】
 
 ## 数组遍历
@@ -210,9 +209,9 @@ for-of可以用来遍历Set结构和Map结构，但是不可以直接遍历objec
 const arr = ['foo', 'bar', 'baz']
 console.log(arr[Symbol.iterator]())
 // 返回一个iterator的对象，其原型对象上面有next方法
-// Array Iterator {}  
+// Array Iterator {}
 //  __proto__: Array Iterator
-//    next: ƒ next()   
+//    next: ƒ next()
 //    Symbol(Symbol.toStringTag): "Array Iterator"
 //    __proto__: Object
 const iterator = arr[Symbol.iterator]()
@@ -276,7 +275,7 @@ let imgs = Array.from(document.querySelectorAll('img'))
 **举一个例子：**
 初始化一个长度为5的数组
 ```js
-//ES5 
+//ES5
 let array = Array(5)
 
 array.forEach(function (item) {

@@ -2,8 +2,6 @@
 title: JavaScript
 tags:
   - JavaScript
-prev: false
-next: false
 sidebarDepth: 5
 ---
 # JavaScript

@@ -1,12 +1,11 @@
 ---
 title: ES8(一) —— async&await
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ../ES7/02ES7pow.md
-next: ./02ES8object.md
 sidebarDepth: 5
 ---
+# ES8(一) —— async&await
 ## async和普通函数的区别
 ```js
 // 普通函数
@@ -52,7 +51,7 @@ async function firstAsync() {
   promise.then(val => {
     console.log(val)
   })
-  
+
   console.log(2)
   return 3
 }
@@ -63,7 +62,7 @@ firstAsync().then(val => {
 
 //2
 //3
-//now it is done  
+//now it is done
 ```
 使用`await`
 ```js
@@ -77,7 +76,7 @@ async function firstAsync() {
   // 执行异步操作
   let result = await promise
   console.log(result)
-  
+
   console.log(2)
   return 3
 }
@@ -92,10 +91,10 @@ firstAsync().then(val => {
 ```
 `await promise` 是一个表达式，后面必须要跟`promise`对象，如果不是会自动处理成`promise`对象
 ```js
-console.log(await promise) 
+console.log(await promise)
 //now it is done  ---有返回值
 console.log(await 40) //40
-console.log(await promise.resolve(40)) //40 
+console.log(await promise.resolve(40)) //40
 ```
 ## async/await处理多回调异步
 `ES2017`提供的`Async/Await`是标准的异步编程语法
@@ -123,10 +122,10 @@ async function main () {
     try{
         const users = await ajax('/api/users.json')
         console.log(users)
-        
+
         const posts = await ajax('/api/posts.json')
         console.log(posts)
-        
+
         const urls = await ajax('/api/urls.json')
         console.log(urls)
     } catch (e) {

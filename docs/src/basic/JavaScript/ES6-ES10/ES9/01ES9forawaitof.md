@@ -1,12 +1,11 @@
 ---
 title: ES9(一) —— For await of
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ../ES8/05ES8.md
-next: ./02ES9finally.md
 sidebarDepth: 5
 ---
+# ES9(一) —— For await of
 ## 问：ES9中异步操作集合是如何遍历的?
 数组中的元素都是`promise`对象，那么是没有办法遍历的。
 

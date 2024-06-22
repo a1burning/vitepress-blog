@@ -1,12 +1,11 @@
 ---
 title: ES9(四) —— RegExp-dotAll...
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./03ES9rest.md
-next: ./05ES9unicode.md
 sidebarDepth: 5
 ---
+# ES9(四) —— RegExp-dotAll...
 ## RegExp 在ES9中新增
 - dotAll
 - 命名分组捕获
@@ -81,7 +80,7 @@ console.log(t[3]) //07
 const T = "2019-06-07".match(/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/)
 
 console.log(T)
-// ["2019-06-07", "2019", "06", "07", index: 0, input: "2019-06-07", 
+// ["2019-06-07", "2019", "06", "07", index: 0, input: "2019-06-07",
 // groups: {day: "07", month: "06", year: "2019"}]
 // 这个时候groups里面有值了，而且用命名的key可以取到
 

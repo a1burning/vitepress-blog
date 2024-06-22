@@ -6,6 +6,7 @@ tags:
 date: 2020-11-19
 sidebarDepth: 5
 ---
+# JavaScript异步编程
 ## JavaScript采用单线程模式工作的原因
 最早`JavaScript`语言就是运行在浏览器端的语言，目的是**为了实现页面上的动态交互**。实现页面交互的核心就是`DOM`操作，这就决定了它必须使用单线程模型，否则就会出现很复杂的线程同步问题。
 
@@ -39,7 +40,7 @@ console.log('global end')
 // global begin
 // foo task
 // bar task
-//global end
+// global end
 
 // 使用调用栈的逻辑
 ```
@@ -101,9 +102,9 @@ foo(function() {
 
 还有其他的一些实现异步的方式，例如：**事件机制和发布订阅**。这些也都是基于回调函数之上的变体。
 ### Promise —— 更优的异步编程解决方案
-主要为了解决回调地狱问题，详细了解参考 [Promise（更优的异步编程解决方案）](../../ES6-ES10/ES6/11ES6(promise))
+主要为了解决回调地狱问题，详细了解参考 [Promise（更优的异步编程解决方案）](/basic/JavaScript/ES6-ES10/ES6/11ES6(promise))
 ### Generator
-详细了解参考 [Generator -> Generator异步方案](../../ES6-ES10/ES6/14ES6(generator))
+详细了解参考 [Generator -> Generator异步方案](/basic/JavaScript/ES6-ES10/ES6/14ES6(generator))
 ### async/await —— 异步操作的终极解决方案
-详细了解参考 [async&await -> async/await处理多回调异步](../../ES6-ES10/ES8/01ES8async)
+详细了解参考 [async&await -> async/await处理多回调异步](/basic/JavaScript/ES6-ES10/ES8/01ES8async)
 

@@ -1,11 +1,12 @@
 ---
 title: waterfall瀑布流布局+动态渲染
-tags: 
+tags:
   - H5
   - Example
 date: 2017-06-08
 sidebarDepth: 5
 ---
+# waterfall瀑布流布局+动态渲染
 ## 瀑布流典型网站
 花瓣网、堆糖
 ## 瀑布流布局原理
@@ -13,7 +14,7 @@ sidebarDepth: 5
 首先先是页面布局
 特点是：宽度一样，长度不一样
 
-![瀑布流布局原理图.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1cde0209b77e4801b0556a4a2acee520~tplv-k3u1fbpfcp-zoom-1.image)
+![瀑布流布局原理图.png](/assets/images/basic/waterfall0.png)
 
 由此可以知道，这种布局要用到**绝对定位**的思想来做。
 
@@ -22,7 +23,7 @@ sidebarDepth: 5
 > **如何获取最矮的一列呢？**
 >
 > 第一个最好找，其他的每一个盒子可以获取它的高度，找最矮的盒子，然后找到最矮盒子的定位。
-                                                            
+
 > **新追加进去的盒子的定位是：**
 >
 > - `left`：最矮盒子的索引*（盒子的宽度+左右间距）
@@ -35,7 +36,7 @@ sidebarDepth: 5
 
 ### 具体思路
 
-![瀑布流原理.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c19ee00606546c4b0dc40717721c31e~tplv-k3u1fbpfcp-zoom-1.image)
+![瀑布流原理.png](/assets/images/basic/waterfall1.png)
 
 最外边的左右两边是没有间距的，所以`5`列的情况下有`4`个间距。所以宽度`width`一定的情况下，间距的宽度`space`是可以计算出来的：
 
@@ -141,7 +142,7 @@ var space = (wParent - 5 * width) / (col - 1);
             if(i < col ){
                 $item.css({
                     top: 0,
-                    left:i * (width + space)  
+                    left:i * (width + space)
                 });
                //把高度添加进数组中
                 colHeightArr[i] = height;
@@ -155,11 +156,11 @@ var space = (wParent - 5 * width) / (col - 1);
 
 这样你就看到了效果图（因为模拟做了`13`个盒子，所以剩下的叠在了一起）
 
-![第一排布局.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/987db17526d04942a7e9c8c43a1249f1~tplv-k3u1fbpfcp-zoom-1.image)
+![第一排布局.png](/assets/images/basic/waterfall2.png)
 
 这个时候打印以下高度数组：
 
-![colHeightArr.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b25c637127db4bdc8761cfbb53beb96e~tplv-k3u1fbpfcp-zoom-1.image)
+![colHeightArr.png](/assets/images/basic/waterfall3.png)
 
 可以看到前`5`个的高度都存到数组中去了。可以判断出来数组中最小的是`289`，`289`对应的数组的索引就是那一列的索引。
 
@@ -204,9 +205,9 @@ var space = (wParent - 5 * width) / (col - 1);
 
                 //colHeightArr[i] = height;
                 colHeightArr.push(height);
-   
+
              //其他的都要根据最矮的一列进行排列
-             }else{    
+             }else{
                 //找到最矮的那一列进行排列
                 //索引
                 var index = 0;
@@ -248,7 +249,7 @@ var space = (wParent - 5 * width) / (col - 1);
 
 效果图：
 
-![其余排的布局.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32032d1eb1dd42ffaf73f7db6fabe260~tplv-k3u1fbpfcp-zoom-1.image)
+![其余排的布局.png](/assets/images/basic/waterfall4.png)
 
 
 ### 第五步
@@ -267,10 +268,10 @@ window.onload = function(){
 }
 
 //为什么不用jquery的，因为这个是在dom元素下载完毕之后进行加载这个方法，需要等所有的资源加载完之后进行排列
-/*   
+/*
 $(function(){
 	//console.log('dom loaded');
-});    
+});
 */
 ```
 
@@ -279,9 +280,7 @@ $(function(){
 
 原理图：
 
-![数据交互原理图.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6c0d1adb417460396801b7f9f7261b7~tplv-k3u1fbpfcp-zoom-1.image)
-
-
+![数据交互原理图.png](/assets/images/basic/waterfall5.png)
 
 > **接口文档：**<br/>
 > 接口说明: 瀑布流分页数据<br/>
@@ -303,7 +302,7 @@ $(function(){
 ```html
 <div class="container">
     <div class="items">
-        <!--TODO 需要渲染数据的地方-->
+        <!-- 这里是需要渲染数据的地方-->
     </div>
     <div class="btn loading">正在加载中...</div>
 </div>
@@ -315,7 +314,7 @@ $(function(){
   +  2.按钮需要显示成加载更多
   +  3.加载完成渲染到页面当中  `artTemplate`
   +  4.初始化成瀑布流布局   `waterfall`
-- 加载下一页的时候 
+- 加载下一页的时候
   +  1.加载数据
       *  手动加载：点击按钮加载下一页的数据
       *   自动加载：滚动到底部的时候主动加载下一页
@@ -332,7 +331,7 @@ $(function(){
 ```javascript
  $(function(){
         //实现动态的瀑布流渲染
-      
+
         //渲染
         var render = function(){
             // 加载数据  渲染页面  瀑布流布局
@@ -358,7 +357,7 @@ $(function(){
 
 拿到的数据如图：
 
-![data.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f21d76b2d11403890babf675f1742a1~tplv-k3u1fbpfcp-zoom-1.image)
+![data.png](/assets/images/basic/waterfall6.png)
 
 #### 渲染页面
 准备模板
@@ -373,7 +372,7 @@ $(function(){
 </script>
 
 <script>
-  $(function(){
+$(function(){
     //获取需要操作的dom
     var $items = $(".items");
     var $btn = $(".btn");
@@ -398,11 +397,12 @@ $(function(){
             }
         });
     }
-    
+
     render();
-  });
+});
 </script>
 ```
+
 #### 第二页面的渲染（手动加载）
 第二页需要改变的东西：
 1. 添加按钮的点击事件，点击按钮之后就进行渲染。
@@ -412,7 +412,7 @@ $(function(){
 5. `render`函数中在渲染的时候判断一下是不是没有数据了，根据返回的数组中的长度是不是为零来判断，如果是零的话就显示没有更多数据了。
 
 ```javascript
- $(function(){
+$(function(){
     //获取需要操作的dom
     var $items = $(".items");
     var $btn = $(".btn");
@@ -468,13 +468,12 @@ $(function(){
 });
 ```
 
-
 #### 第二页面的渲染（滚动加载）
 说到滚动渲染，就是要我们渲染过的页面到浏览器底部的一定距离就要进行下一次的请求了，这就要进行一个判断了。
 
 原理图：
 
-![Paste_Image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2d44b503d3c04c53ad2cc234dbaaf18f~tplv-k3u1fbpfcp-zoom-1.image)
+![Paste_Image.png](/assets/images/basic/waterfall7.png)
 
 当`bottom < 200px`的时候进行`ajax`请求。
 
@@ -482,7 +481,7 @@ $(function(){
 > bottom = items的高度 + items距离顶部的距离 - 向上卷曲的高度 - 整个浏览器的高度
 
 ```javascript
- $(function(){
+$(function(){
     //实现动态的瀑布流渲染
 
     //获取需要操作的dom
@@ -496,7 +495,7 @@ $(function(){
             type:'get',
             url:'data.php',
             data:{
-                page:$btn.data("page")||1,   
+                page:$btn.data("page")||1,
                 pageSize:10
             },
             beforeSend:function(){
@@ -561,7 +560,7 @@ $(function(){
 
 花瓣在加载图片的时候也进行了宽高的设定，但是这个大小要根据原图片的尺寸进行大小的缩放。
 
-![huaban.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f0236ab1059d4441892ff56e30d2a363~tplv-k3u1fbpfcp-zoom-1.image)
+![huaban.png](/assets/images/basic/waterfall8.png)
 
 原来的尺寸是`608`，现在的宽度是`200`，那么现在的高度就进行一个换算
 
@@ -572,7 +571,7 @@ $(function(){
 ```javascript
 // 模板引擎中写
 <img height = "<%=items[i].width * items[i].height / width%>" src = "<%=items[i].path%>" />
-/*  
+/*
 同样在ajax的success中
 $items.append(
     template('template',{

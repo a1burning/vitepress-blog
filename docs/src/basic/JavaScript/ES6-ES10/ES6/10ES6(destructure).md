@@ -1,12 +1,11 @@
 ---
 title: ES6（十）—— Destructure（解构）
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./09ES6(string).md
-next: ./11ES6(promise).md
 sidebarDepth: 5
 ---
+# ES6（十）—— Destructure（解构）
 解构赋值：
 使用数组索引去使用变量，不如直接赋值一个变量，但是也不适合用let声明很多变量
 
@@ -32,7 +31,7 @@ console.log(firstName, surName)
 //跳过某个值
 //Array
 let arr = ['a', 'b', 'c', 'd']
-let [firstName,, thirdName] = arr 
+let [firstName,, thirdName] = arr
 // 左边是变量，右边是一个可遍历的对象，包括Set和Map
 console.log(firstName, thirdName) // a c
 

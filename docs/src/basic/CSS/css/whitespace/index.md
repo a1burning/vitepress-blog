@@ -1,13 +1,13 @@
 ---
 title: White-space
-tags: 
+tags:
   - CSS
 date: 2018-04-23
-prev: false
-next: false
 sidebarDepth: 5
 ---
-**white-space 属性**设置处理元素内的空白，所谓空白有哪些？
+
+# White-space
+**white-space 属性** 设置处理元素内的空白，所谓空白有哪些？
 
 **Space(空格)、Enter(回车)、Tab(制表符)**
 
@@ -16,13 +16,11 @@ sidebarDepth: 5
 1. 在开发中，无论我们敲多少空格和回车，显示在页面上的都会合并成一个。
 2. 我们的文字在超过一行的情况下，就会自动换行。
 
-
-
 ## 属性介绍
 
 但是开发的要求各种各样，white-space的功能属性也很强大，可以有各种各样的不同效果，下面来看一张图：
 
-![whiteSpace.png](https://user-gold-cdn.xitu.io/2018/4/23/162f1e8bb3469e29?w=391&h=583&f=png&s=11614)
+![whiteSpace.png](/assets/images/basic/css40.png)
 
 
 这个古诗是怎么打出来的呢？
@@ -53,11 +51,11 @@ sidebarDepth: 5
 
 ios端
 
-![row.png](https://user-gold-cdn.xitu.io/2018/4/23/162f1e8bb33d2533?w=368&h=58&f=png&s=943)
+![row.png](/assets/images/basic/css41.png)
 
 andriod
 
-![overrow.png](https://user-gold-cdn.xitu.io/2018/4/23/162f1e8bb3610603?w=369&h=118&f=png&s=4865)
+![overrow.png](/assets/images/basic/css42.png)
 
 
 这样的话使用媒体查询也无法处理，所以在这一行的父元素中设置，所有的元素强制一行显示。
@@ -75,7 +73,7 @@ ul{
 
 文字超出去怎么办？
 
-![overtext.png](https://user-gold-cdn.xitu.io/2018/4/23/162f1e8bb373bdea?w=170&h=76&f=png&s=943)
+![overtext.png](/assets/images/basic/css43.png)
 
 
 一般都自动换行了，想要文字溢出的部分自动用省略号表示，那么离不开三个属性:
@@ -88,19 +86,19 @@ text-overflow: ellipsis;/*溢出的部分使用省略号*/
 
 可以看到下面的效果:
 
-![overEllipsis.png](https://user-gold-cdn.xitu.io/2018/4/23/162f1e8bb381c3e5?w=177&h=54&f=png&s=599)
+![overEllipsis.png](/assets/images/basic/css44.png)
 
 
 ### 三、文字展示
 
 如果是显示诗歌，或者文案之类的，很多情况需要输入什么样子，出来什么样子。
 
-![poetry.png](https://user-gold-cdn.xitu.io/2018/4/23/162f1e8bb3975970?w=302&h=170&f=png&s=9303)
+![poetry.png](/assets/images/basic/css45.png)
 
 
 
 这个时候用pre属性是最合适的(毕竟兼容性最好么):
 
 ```css
-white-space:pre;
+white-space: pre;
 ```

@@ -1,12 +1,11 @@
 ---
 title: ES6（八）—— RegExp
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./07ES6(setmap).md
-next: ./09ES6(string).md
 sidebarDepth: 5
 ---
+# ES6（八）—— RegExp
 ## sticky —— y修饰符
 y表示sticky（粘连），全局匹配，必须从第一个开始匹配，连续匹配
 ```js

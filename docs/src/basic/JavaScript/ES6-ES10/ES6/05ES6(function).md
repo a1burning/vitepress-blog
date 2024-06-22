@@ -1,13 +1,12 @@
 ---
 title: ES6（五）—— 函数
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./04ES6(class).md
-next: ./06ES6(object).md
 sidebarDepth: 5
 ---
-**函数方法更新【默认值、不确定参数、箭头函数】** 
+# ES6（五）—— 函数
+**函数方法更新【默认值、不确定参数、箭头函数】**
 
 ## Default Parameters —— 如何处理函数参数默认值？
 判断函数有没有默认值不能使用a || b，只能判断其是否等于undefined
@@ -87,7 +86,7 @@ function sum () {
     // Array.prototype.forEach.call(arguments, function (item) {
     //     num += item * 1
     // })
-    
+
     Array.from(arguments).forEach( function (item) {
         num += item * 1
     })

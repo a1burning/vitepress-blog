@@ -25,7 +25,7 @@ sidebarDepth: 5
 
 ## 检验
 在命令行中写`nvm`看是否能正常运行
-![nvm](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fe15119e2a0845749a5e36eea94a754f~tplv-k3u1fbpfcp-zoom-1.image)
+![alt text](/assets/images/more/tools/node0.png)
 
 ## 命令
 - nvm version —— 查看当前nvm版本

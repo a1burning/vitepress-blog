@@ -1,12 +1,11 @@
 ---
 title: ES7(一) —— includes
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ../ES6/17ES6(symbol).md
-next: ./02ES7pow.md
 sidebarDepth: 5
 ---
+# ES7(一) —— includes
 ## 数组如何判断元素是否存在？
 ### ES5 indexOf
 数组中有的返回下标，没有的返回-1，但是其无法查找数组中的NaN

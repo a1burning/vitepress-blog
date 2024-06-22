@@ -4,17 +4,16 @@ tags:
  - Vue3
  - Example
 date: 2021-08-09
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# 用Vue3简单写一个单行横向滚动组件
 ## 效果图 :tada:
 把之前完成的一个效果图摘出来记录一下，核心代码在这里，如果项目中用到其他的技术，也很容易改。
 
 ![scroll.gif](/assets/images/javascript/scroll.gif)
 
 ## 需求分析
-::: tip 实现以下功能
+::: info 实现以下功能
 1. 展示数据`始终一行`，多余的部分可以出滚动条，同时隐藏滚动条样式。
 2. 支持笔记本`触控滑动`展示
 3. 支持`鼠标点击滑动`，多余的时候出现箭头按钮，默认滑动3个卡片的位置，顶头就切换方向
@@ -192,6 +191,7 @@ export default defineComponent({
 ### 4. 页面挂载后监听groupBoxRef的scroll事件并获取当前的滚动位置
 
 ```js
+<script>
 // 添加reactive和onMounted
 import { defineComponent, ref, reactive, onMounted }
 ...
@@ -220,6 +220,7 @@ return {
     groupBoxRef,
     groupCardRef,
 };
+</script>
 ```
 
 ### 5. 计算展示的宽度显隐箭头，当卡片宽度大于外层宽度就展示

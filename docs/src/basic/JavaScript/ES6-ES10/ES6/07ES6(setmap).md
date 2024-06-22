@@ -1,12 +1,11 @@
 ---
 title: ES6（七）—— Set & Map
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./06ES6(object).md
-next: ./08ES6(regexp).md
 sidebarDepth: 5
 ---
+# ES6（七）—— Set & Map
 ## Set数据结构
 ES6除了可以使用Object存储数据，还可以使用Set存储数据
 1. Set存储的成员是唯一的，不是重复的，如果有重复会自动过滤掉（用于数组去重，下面有解释）

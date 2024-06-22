@@ -1,10 +1,11 @@
 ---
 title: JavaScript类型系统
-tags: 
+tags:
   - JavaScript
 date: 2020-11-30
 sidebarDepth: 5
 ---
+# JavaScript类型系统
 这篇文章要先讨论一些概念，这些概念我们在开始学习JavaScript的时候就知道了，**`JavaScript是一个弱类型且动态类型的语言`**，那么这些概念具体这里做了整理。之后还要重点讨论的是 **`JavaScript自有类型系统的问题`**，以及如何借助一些优秀的技术方案，解决这些问题。
 
 ## 类型系统
@@ -25,7 +26,7 @@ class Main {
     static void foo(int num) {
         System.out.printIn(num);
     }
-    
+
     public static void main(Sting[] args) {
         // 下面的如果int类型就通过，如果不是int类型就会报错
         Main.foo(100); // ok
@@ -126,7 +127,7 @@ setTimeout(() => {
 }, 100000)
 ```
 
-2. 函数参数类型不确定，输入的结果有偏差 
+2. 函数参数类型不确定，输入的结果有偏差
 
 ```js
 // 不明确是数字，所以结果不一样
@@ -166,8 +167,8 @@ function sum (a, b) {
 
 ## JavaScript自由类型系统问题的解决方案
 这里之后会进行内容补充
-- [Flow（一）—— JavaScript静态类型检查器](https://juejin.cn/post/6900912350640275470/)
-- [TypeScript(一) —— 了解并快速入门](https://juejin.cn/post/6901255219691454472)
+- [Flow](/more/tools/toolsLibrary/Flow/01)
+- [TypeScript](/basic/JavaScript/typescript/01)
 
 ## 关于查资料对于编译型语言和解释型语言的知识点补充
 ### 编译型语言

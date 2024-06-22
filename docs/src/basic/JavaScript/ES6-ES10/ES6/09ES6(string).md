@@ -1,13 +1,12 @@
 ---
 title: ES6（九）—— String
-tags: 
+tags:
   - JavaScript
   - ES6
-prev: ./08ES6(regexp).md
-next: ./10ES6(destructure).md
 sidebarDepth: 5
 displayAllHeaders: true
 ---
+# ES6（九）—— String
 ## Template
 ### String Literals（字符串字面量）
 用来解决字符串拼接问题，从 ES6 开始可以这样定义字符串了。
@@ -37,7 +36,7 @@ ES6
 html = `<div>
     <p>你好啊</p>
 </div>`
-console.log(html)  
+console.log(html)
 //<div>
 //    <p>你好啊</p>
 //</div>
@@ -99,7 +98,7 @@ function myTagFuc (string, name, gender) {
   console.log(gender) // true
 }
 
-const result = myTagFuc`hey, ${name} is a ${gender}` 
+const result = myTagFuc`hey, ${name} is a ${gender}`
 ```
 如果我们函数有返回值，那么会作为整体的模板字符串返回值返回
 ```js

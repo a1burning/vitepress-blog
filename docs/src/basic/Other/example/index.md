@@ -29,4 +29,4 @@ sidebarDepth: 5
 - [CSS三角的写法（兼容IE6）](./csstriangle/)
 
 ## Browser
-- [前端浏览器加载照片方向问题的研究](./exif/)
+- [前端浏览器加载照片方向exif问题的研究](./exif/)

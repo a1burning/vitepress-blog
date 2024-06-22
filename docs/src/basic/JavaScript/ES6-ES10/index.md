@@ -35,7 +35,7 @@ JavaScript = ECMAScript + BOM + DOM
 -   全新的数据类型和数据结构
 
 ## ES6-ES10学习版图
-![ES6-ES10学习版图](/assets/img/es6.png)
+![ES6-ES10学习版图](/assets/images/basic/es6.png)
 
 ## 基本语法链接整合
 ### ES6
