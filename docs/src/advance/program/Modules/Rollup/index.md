@@ -1,11 +1,12 @@
 ---
 title: Rollup —— 适合框架和类库使用的模块打包器
-tags: 
+tags:
   - 前端工程化
   - Rollup
 date: 2020-11-26
 sidebarDepth: 5
 ---
+# Rollup —— 适合框架和类库使用的模块打包器
 这篇文章目前旨在简单了解`Rollup`是什么并且如何上手操作，之后会再进行深入分析。
 ## Rollup概述
 
@@ -52,7 +53,7 @@ export default {
 
 2. 使用命令行要添加`--config`说要使用配置文件`rollup --config`，默认是不使用配置文件的。
 
-3. `rollup --config <filename>`后面可以指定配置文件的名称，默认是`rollup.config.js`，也可以自己指定别的文件名。 
+3. `rollup --config <filename>`后面可以指定配置文件的名称，默认是`rollup.config.js`，也可以自己指定别的文件名。
 
 ## 插件
 如果要加载其他类型的资源文件，或者是导入`CommonJS`模块，或者编译`ES6`新特性，`Rollup`同样支持使用插件的方式扩展。
@@ -162,7 +163,7 @@ log(cjs)
 /* var cjs_module = {
     foo: bar
   };
-*/  
+*/
 ```
 
 ## Code Splitting（代码拆分）
@@ -177,7 +178,7 @@ log(cjs)
 // then方法参数是module，由于模块导出的成员都会放在module对象中，所以可以通过解构的方式提取log
 import('./logger').then(({ log }) => {
   log('code splitting~')
-})  
+})
 ```
 
 2. 修改`roll.config.js`中`output`里面的配置
@@ -201,13 +202,13 @@ export default {
 > ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5e4008b0d0914b9ab881188b85afea9a~tplv-k3u1fbpfcp-watermark.image)
 >
 > `UMD` 和 `iife` 是不支持代码拆分方式格式，因为自执行函数会把所有的模块都放到一个函数中，并没有像`webpack`一样有一些引导代码，所以没有办法做到代码拆分
-> 
+>
 > 如果要使用代码拆分，就需要使用`AMD` or `CommonJS`等方式。在浏览器中只能使用`AMD`的方式，所以这里改用输出格式为`AMD`
 >
 > 况且我们拆分代码输出不同的文件，`file`属性只是针对一个文件，所以我们需要改用`dir`去指定文件夹名称，不然还是会报错
 >
 > ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1bda1773091843c8b5abdeacfa37bf19~tplv-k3u1fbpfcp-watermark.image)
-> 
+>
 
 3. 运行代码`rollup --config`可以看到`dist`文件夹里面有两个拆分打包的文件。
 

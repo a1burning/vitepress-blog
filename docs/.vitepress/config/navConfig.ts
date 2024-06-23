@@ -3,6 +3,11 @@ export default [
     {
         text: '前端基础', items:[
             {
+                text: 'HTML', items: [
+                    {text: 'Canvas', link: '/basic/HTML/Canvas/01' },
+                ]
+            },
+            {
                 text: 'JavaScript', items: [
                     {text: 'JS', link: '/basic/JavaScript/javascript/' },
                     {text: 'ES6-ES10', link: '/basic/JavaScript/ES6-ES10/' },
@@ -17,8 +22,8 @@ export default [
             },
             {
                 text: '其他', items: [
-                    { text: '专题', link: '/basic/Other/subjects/' },
-                    { text: '实践', link: '/basic/Other/example/' },
+                    { text: '专题', link: '/basic/Other/subjects/CSS专题/01' },
+                    { text: '实践', link: '/basic/Other/example/CSS实例/01' },
                 ]
             }
         ]
@@ -29,7 +34,7 @@ export default [
                 text: '函数式编程', link: '/advance/Functor/01'
             },
             {
-                text: '性能优化', link: '/advance/performance/'
+                text: '性能优化', link: '/advance/performance/GC/01'
             },
             {
                 text: '前端工程化', items: [
@@ -81,7 +86,7 @@ export default [
             { text: '部署', link: '/more/deployment/'},
             { text: 'Docker', link: '/more/Docker/01'},
             { text: '计算机网络', link: '/more/Network/'},
-            { text: 'Tools', link: '/more/tools/'},
+            { text: 'Tools', link: '/more/tools/node/nodemon'},
         ]
     },
     // { text: '标签分类', link: '/tag/', icon: 'reco-category' },

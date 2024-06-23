@@ -1,12 +1,13 @@
 ---
 title: Plop —— 小而美的脚手架工具
-tags: 
+tags:
   - 前端工程化
   - Plop
   - 脚手架
 date: 2020-12-26
 sidebarDepth: 5
 ---
+# Plop —— 小而美的脚手架工具
 ## Plop介绍
 
 主要用于创建项目中特定文件类型的小工具，类似于`Yeoman`中的`sub generator`，一般不会独立使用。一般会把`Plop`集成到项目中，用来自动化的创建同类型的项目文件。
@@ -27,7 +28,7 @@ npm install -g plop
 
 ```css
 .{{name}} {
-  
+
 }
 ```
 - component.hbs
@@ -135,7 +136,7 @@ export default () => (
 
 ```css
 .Header {
-  
+
 }
 ```
 
@@ -156,7 +157,7 @@ it('renders widthout crashing', () => {
 这样，就可以根据模板一键生成一个组件目录。
 
 ## 总结
-1. 将`plop`模块作为项目开发依赖安装 
+1. 将`plop`模块作为项目开发依赖安装
 2. 编写用于生成特定类型文件的模板
 3. 在项目根目录下创建一个`plopfile.js`文件
 4. 在`plopfile.js`文件中定义脚手架任务

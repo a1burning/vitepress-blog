@@ -3,11 +3,9 @@ title: Stylelint
 tags:
   - 前端工程化
   - 模块化开发
-prev: false
-next: false
 sidebarDepth: 5
 ---
-
+# Stylelint
 css代码的lint操作使用工具Stylelint，和eslint基本一致
 
 - 提供默认的代码检查规则，可以手动开启或者关闭某个规则

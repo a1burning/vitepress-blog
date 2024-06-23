@@ -4,10 +4,9 @@ tags:
   - 前端工程化
   - Gulp
 date: 2018-04-26
-prev: false
-next: false
 sidebarDepth: 5
 ---
+# Gulp(4.0之前旧版本)
 ## gulp的功能
 
 + 主要用在项目上线的时候：所有文件的压缩处理和合并处理（html,css,js）

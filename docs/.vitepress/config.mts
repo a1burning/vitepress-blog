@@ -13,10 +13,20 @@ export default defineConfig({
     ignoreDeadLinks: true,// 忽略死链接检查
     themeConfig: {
         logo: '/assets/img/logo.webp',
-        lastUpdatedText: '更新时间', // string | boolean
+        lastUpdated: {
+            text: '更新时间',
+            formatOptions: {
+                dateStyle: 'full',
+                timeStyle: 'medium'
+            }
+        },
         // https://vitepress.dev/reference/default-theme-config
         nav,
         sidebar,
+        outline: {
+            level: [2, 5],
+            label: '目录',
+        },
         // socialLinks: [
         //     { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
         //     { icon: 'twitter', link: 'https://twitter.com/vite_js'}
@@ -40,7 +50,7 @@ export default defineConfig({
             // 默认禁用图片懒加载
             lazyLoading: true,
         },
-        lineNumbers: true
+        lineNumbers: true,
     },
     vite: {
         plugins,

@@ -1,12 +1,11 @@
 ---
 title: fis3-smarty语法总结
-tags: 
+tags:
   - 前端工程化
   - FIS
-prev: ./01fis.md
-next: ./03smarty.md
 sidebarDepth: 5
 ---
+# fis3-smarty语法总结
 ## 什么是smarty
 Smarty是一个使用**PHP**写出来的**模板引擎**，一说模板引擎，其实就是再html中插入可以直接渲染的数据。这个是为了让前端和后台分离的一种管理模式。
 
@@ -97,7 +96,7 @@ fis3-smarty默认的分届符为`{%、%}`，这个可以修改。
     <body>
         <script type="text/javascript">
             !function(){
-                console.log("aa");	
+                console.log("aa");
             }();
         </script>
     </body>
@@ -344,7 +343,7 @@ fis3-smarty默认的分届符为`{%、%}`，这个可以修改。
 {%block name="body_end"%}
 	<script>
 		var finished = "{%$result.finished%}";
-		console.log(finished);	
+		console.log(finished);
 	</script>
 	{%require name="product:product.js"%}
 {%/block%}

@@ -3,11 +3,9 @@ title: Git Hooks
 tags:
   - 前端工程化
   - 模块化开发
-prev: false
-next: false
 sidebarDepth: 5
 ---
-
+# Git Hooks
 如果团队中某个成员没有按照要求使用lint工具，在代码提交至仓库之前未执行lint工作，把有问题的代码提交到了远程仓库。
 
 如果口头约定让大家进行lint操作只是形式，所以可以**通过Git Hooks在代码提交前强制lint**

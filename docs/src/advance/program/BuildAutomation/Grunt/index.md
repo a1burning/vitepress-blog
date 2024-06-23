@@ -1,11 +1,12 @@
 ---
 title: Grunt
-tags: 
+tags:
   - 前端工程化
   - Grunt
 date: 2020-12-26
 sidebarDepth: 5
 ---
+# Grunt
 [Grunt官网](https://www.gruntjs.net/)
 
 ## 特点
@@ -18,8 +19,8 @@ npm i -g grunt
 #### 起步
 1. 添加一个`gruntfile.js`的文件，进行配置
 
-> `gruntfile.js`是 `Grunt` 的入口文件  
-> 用于定义一些需要 `Grunt` 自动执行的任务，需要导出一个函数  
+> `gruntfile.js`是 `Grunt` 的入口文件
+> 用于定义一些需要 `Grunt` 自动执行的任务，需要导出一个函数
 > 此函数接收一个 `grunt` 形参，内部提供一些创建任务是可以用到的`API`
 
 ```js
@@ -38,7 +39,7 @@ grunt foo
 # Running "foo" task
 # hello grunt
 
-# Done.      
+# Done.
 ```
 #### 添加任务描述
 如果第二个参数是字符串，那么默认是任务描述
@@ -311,8 +312,8 @@ grunt build
 ```
 
 ### Grunt插件的使用
-**插件机制是`Grunt`的核心**，因为很多构建任务是通用的，例如：压缩代码。  
-一般我们都是通过通用的构建任务构成的。  
+**插件机制是`Grunt`的核心**，因为很多构建任务是通用的，例如：压缩代码。
+一般我们都是通过通用的构建任务构成的。
 插件的命名规则都是`grunt-contrib-<taskName>`
 #### 步骤
 - 安装插件
@@ -466,7 +467,7 @@ grunt.registerTask('default', ['sass', 'babel', 'watch'])
 ```
 这个时候执行`grunt`即可。
 ```bash
-grunt      
+grunt
 
 # Running "sass:main" (sass) task
 

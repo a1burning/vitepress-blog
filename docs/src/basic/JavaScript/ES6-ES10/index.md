@@ -37,39 +37,3 @@ JavaScript = ECMAScript + BOM + DOM
 ## ES6-ES10学习版图
 ![ES6-ES10学习版图](/assets/images/basic/es6.png)
 
-## 基本语法链接整合
-### ES6
-- [ES6（一）—— 作用域](./ES6/01ES6)
-- [ES6（二）—— let 与 const](./ES6/02ES6(let))
-- [ES6（三）—— 数组](./ES6/03ES6(array))
-- [ES6（四）—— Class](./ES6/04ES6(class))
-- [ES6（五）—— 函数](./ES6/05ES6(function))
-- [ES6（六）—— Object](./ES6/06ES6(object))
-- [ES6（七）—— Set & Map](./ES6/07ES6(setmap))
-- [ES6（八）—— RegExp](./ES6/08ES6(regexp))
-- [ES6（九）—— String](./ES6/09ES6(string))
-- [ES6（十）—— Destructure（解构）](./ES6/10ES6(destructure))
-- [ES6（十一）—— Promise（更优的异步编程解决方案）](./ES6/11ES6(promise))
-- [ES6（十二）—— Reflect](./ES6/12ES6(reflect))
-- [ES6（十三）—— Proxy](./ES6/13ES6(proxy))
-- [ES6（十四）—— Generator](./ES6/14ES6(generator))
-- [ES6（十五）—— Iterator](./ES6/15ES6(iterator))
-- [ES6（十六）—— Modules](./ES6/16ES6(modules))
-- [ES6（十七）—— Symbol](./ES6/17ES6(symbol))
-### ES7
-- [ES7 (一) —— includes](./ES7/01ES7includes)
-- [ES7(二) —— pow](./ES7/02ES7pow)
-### ES8
-- [ES8(一) —— async&await](./ES8/01ES8async)
-- [ES8(二) —— Object （keys、values、entries）](./ES8/02ES8object)
-- [ES8(三) —— String Padding](./ES8/03ES8string)
-- [ES8(四) —— Object.getOwnPropertyDescriptor()](./ES8/04ES8object)
-- [ES8(五) —— 尾逗号合法](./ES8/05ES8)
-### ES9
-- [ES9(一) —— For await of](./ES9/01ES9forawaitof)
-- [ES9(二) —— Promise.finally](./ES9/02ES9finally)
-- [ES9(三) —— Object.rest.spread](./ES9/03ES9rest)
-- [ES9(四) —— RegExp-dotAll...](./ES9/04ES9regexp)
-- [ES9(五) —— Unicode Property Escapes](./ES9/05ES9unicode)
-### ES10
-- [ES10 —— stringify,flat,trimStart,matchAll,fromEntries,BigInt...](./ES10/01ES10)

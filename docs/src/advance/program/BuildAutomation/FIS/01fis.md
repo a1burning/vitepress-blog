@@ -1,11 +1,9 @@
 ---
 title: FIS
-tags: 
+tags:
   - 前端工程化
   - FIS
 date: 2020-12-26
-prev: false
-next: ./02smarty.md
 sidebarDepth: 5
 ---
 # FIS

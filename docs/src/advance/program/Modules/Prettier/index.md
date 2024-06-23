@@ -1,13 +1,11 @@
 ---
 title: Prettier
-tags: 
+tags:
   - 前端工程化
   - 模块化开发
-prev: false
-next: false
 sidebarDepth: 5
 ---
-
+# Prettier
 是近期使用频率非常多的一款前端代码格式化工具，很强大，几乎可以完成前端所有代码的格式化工作。在日常使用中，也可以使用他完成代码的格式化，或者针对markdown进行格式化。
 
 1. 下载模板

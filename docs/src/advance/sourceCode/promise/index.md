@@ -6,6 +6,7 @@ tags:
   - Source Code
 sidebarDepth: 5
 ---
+# 手写一个Promise源码
 > 这里只是对Promise源码的实现做一个剖析，如果想对Promise整体有个了解，<br/>
 请看 [ES6（十一）—— Promise（更优的异步编程解决方案）](/basic/JavaScript/ES6-ES10/ES6/11ES6(promise))
 

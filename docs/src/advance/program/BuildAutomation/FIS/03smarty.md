@@ -1,12 +1,11 @@
 ---
 title: fis3-smarty系统函数语法总结
-tags: 
+tags:
   - 前端工程化
   - FIS
-prev: ./02smarty.md
-next: false
 sidebarDepth: 5
 ---
+# fis3-smarty系统函数语法总结
 ## php方法
 所有的smarty里面，都可以直接使用php函数。如果有些逻辑使用smarty找不到，直接使用php函数也是可以解决的。
 ### json_enCode——对变量进行 JSON 编码
@@ -71,7 +70,7 @@ console.log(result1);
 // gzip, deflate
 ```
 
-#### $smarty.server.HTTP_CONNECTION 
+#### $smarty.server.HTTP_CONNECTION
 ```js
 {%$smarty.server.HTTP_CONNECTION%}
 //close

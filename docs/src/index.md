@@ -59,7 +59,11 @@ features:
 }
 
 .vp-doc h3 {
-    margin-bottom: 16px;
+    margin-bottom: 16px!important;
+}
+
+.highlight-text {
+    color: var(--vp-c-brand-3);
 }
 
 @media (min-width: 640px) {
