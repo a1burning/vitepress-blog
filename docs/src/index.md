@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 进入博客 ->
-      link: /markdown-examples
+      link: /
     - theme: alt
       text: 进入面试题库网站 ->
       link: http://audition.hu77.top/
