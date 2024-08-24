@@ -81,7 +81,7 @@ export default [
     },
     {
         text: '更多', items:[
-            { text: 'Git', link: '/more/Git/01'},
+            { text: 'Git', link: '/more/Git/GitCommand/01'},
             { text: 'AST', link: '/more/AST/01'},
             { text: '部署', link: '/more/deployment/'},
             { text: 'Docker', link: '/more/Docker/01'},

@@ -128,7 +128,8 @@ function isInWhiteList(link) {
         '/basic/Other/subjects',
         '/basic/JavaScript/ES6-ES10',
         '/advance/performance',
-        '/more/tools'
+        '/more/tools',
+        '/more/Git'
     ];
     const path = whiteList.find(path => link.startsWith(path));
     return path || '';
